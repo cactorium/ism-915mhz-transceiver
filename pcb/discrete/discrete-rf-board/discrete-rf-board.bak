@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:discrete-rf-board-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8

@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:discrete-rf-board-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -200,10 +200,10 @@ Text HLabel 2750 3750 0    50   Input ~ 0
 LE
 Text HLabel 2750 3650 0    50   Input ~ 0
 DATA
-Text HLabel 3150 3250 0    50   Input ~ 0
+Text HLabel 2300 2550 0    50   Input ~ 0
 3V3
 Wire Wire Line
-	3400 3250 3150 3250
+	3400 3250 3200 3250
 $Comp
 L power:GND #PWR?
 U 1 1 5CA89918
@@ -237,7 +237,7 @@ F 3 "~" H 5100 3000 50  0001 C CNN
 	1    5100 3000
 	1    0    0    -1  
 $EndComp
-Text Label 3200 3250 0    50   ~ 0
+Text Label 2950 2550 0    50   ~ 0
 3V3
 Text Label 5100 2850 0    50   ~ 0
 3V3
@@ -398,7 +398,7 @@ Wire Wire Line
 Text Notes 2200 3400 0    50   ~ 0
 TODO figure out XTAL freq
 Text Notes 800  5300 0    50   ~ 0
-Optimum inductance = 3.98 nH\nTODO add 470R resistors in parallel with inductors\nplace the inductors at right angles to avoid coupling
+Optimum inductance = 3.98 nH\nTODO place the inductors at right angles to avoid coupling
 $Comp
 L Device:L_Small L?
 U 1 1 5CADEE7E
@@ -619,39 +619,39 @@ Wire Wire Line
 $Comp
 L discrete-parts:Q_NPN_BCEE Q?
 U 1 1 5CB0C390
-P 9200 4150
-F 0 "Q?" H 9500 4150 50  0000 C CNN
-F 1 "BFU520" H 9400 4050 50  0000 L CNN
-F 2 "" H 9200 4150 50  0001 C CNN
-F 3 "" H 9200 4150 50  0001 C CNN
-F 4 "771-BFU520XRR" H 9200 4150 50  0001 C CNN "Mouser"
-	1    9200 4150
+P 9650 4150
+F 0 "Q?" H 9950 4150 50  0000 C CNN
+F 1 "BFU520" H 9850 4050 50  0000 L CNN
+F 2 "" H 9650 4150 50  0001 C CNN
+F 3 "" H 9650 4150 50  0001 C CNN
+F 4 "771-BFU520XRR" H 9650 4150 50  0001 C CNN "Mouser"
+	1    9650 4150
 	1    0    0    -1  
 $EndComp
 Text Notes 7100 4700 0    50   ~ 0
 IL=-0.7dB
-Text HLabel 10350 3550 2    50   Input ~ 0
+Text HLabel 10800 3550 2    50   Input ~ 0
 LO
 $Comp
 L power:GND #PWR?
 U 1 1 5CB0CCE1
-P 9250 4450
-F 0 "#PWR?" H 9250 4200 50  0001 C CNN
-F 1 "GND" H 9250 4300 50  0000 C CNN
-F 2 "" H 9250 4450 50  0001 C CNN
-F 3 "" H 9250 4450 50  0001 C CNN
-	1    9250 4450
+P 9700 4450
+F 0 "#PWR?" H 9700 4200 50  0001 C CNN
+F 1 "GND" H 9700 4300 50  0000 C CNN
+F 2 "" H 9700 4450 50  0001 C CNN
+F 3 "" H 9700 4450 50  0001 C CNN
+	1    9700 4450
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9250 4350 9250 4400
+	9700 4350 9700 4400
 Wire Wire Line
-	9350 4350 9350 4400
+	9800 4350 9800 4400
 Wire Wire Line
-	9350 4400 9250 4400
-Connection ~ 9250 4400
+	9800 4400 9700 4400
+Connection ~ 9700 4400
 Wire Wire Line
-	9250 4400 9250 4450
+	9700 4400 9700 4450
 $Comp
 L Connector:Conn_Coaxial J?
 U 1 1 5CB11865
@@ -685,35 +685,33 @@ Wire Wire Line
 $Comp
 L Connector:Conn_Coaxial J?
 U 1 1 5CB1681E
-P 10100 3850
-F 0 "J?" H 10110 3970 50  0000 C CNN
-F 1 "Conn_Coaxial" V 10215 3850 50  0000 C CNN
-F 2 "" H 10100 3850 50  0001 C CNN
-F 3 " ~" H 10100 3850 50  0001 C CNN
-	1    10100 3850
+P 10550 3850
+F 0 "J?" H 10560 3970 50  0000 C CNN
+F 1 "Conn_Coaxial" V 10665 3850 50  0000 C CNN
+F 2 "" H 10550 3850 50  0001 C CNN
+F 3 " ~" H 10550 3850 50  0001 C CNN
+	1    10550 3850
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5CB16963
-P 10100 4100
-F 0 "#PWR?" H 10100 3850 50  0001 C CNN
-F 1 "GND" H 10100 3950 50  0000 C CNN
-F 2 "" H 10100 4100 50  0001 C CNN
-F 3 "" H 10100 4100 50  0001 C CNN
-	1    10100 4100
+P 10550 4100
+F 0 "#PWR?" H 10550 3850 50  0001 C CNN
+F 1 "GND" H 10550 3950 50  0000 C CNN
+F 2 "" H 10550 4100 50  0001 C CNN
+F 3 "" H 10550 4100 50  0001 C CNN
+	1    10550 4100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10100 4050 10100 4100
+	10550 4050 10550 4100
 Text Notes 6250 4650 0    50   ~ 0
 -3 to +5dBm?\ndatasheet is unclear
 Wire Wire Line
-	10350 3550 9650 3550
+	10800 3550 10100 3550
 Wire Wire Line
-	9650 3550 9650 3850
-Wire Wire Line
-	9650 3850 9750 3850
+	10100 3550 10100 3850
 $Comp
 L Device:R_Small R?
 U 1 1 5CB210CB
@@ -775,7 +773,7 @@ L Device:L_Small L?
 U 1 1 5CB34436
 P 8600 4400
 F 0 "L?" H 8630 4440 50  0000 L CNN
-F 1 "L_Small" H 8630 4360 50  0000 L CNN
+F 1 "9.1 nH" H 8630 4360 50  0000 L CNN
 F 2 "" H 8600 4400 50  0001 C CNN
 F 3 "~" H 8600 4400 50  0001 C CNN
 	1    8600 4400
@@ -786,7 +784,7 @@ L Device:C_Small C?
 U 1 1 5CB344FD
 P 8750 4150
 F 0 "C?" H 8760 4220 50  0000 L CNN
-F 1 "C_Small" H 8760 4070 50  0000 L CNN
+F 1 "7.5 pF" H 8760 4070 50  0000 L CNN
 F 2 "" H 8750 4150 50  0001 C CNN
 F 3 "~" H 8750 4150 50  0001 C CNN
 	1    8750 4150
@@ -797,7 +795,7 @@ L Device:R_Small R?
 U 1 1 5CB34623
 P 8450 3200
 F 0 "R?" H 8480 3220 50  0000 L CNN
-F 1 "3.3k" H 8480 3160 50  0000 L CNN
+F 1 "3.9k" H 8480 3160 50  0000 L CNN
 F 2 "" H 8450 3200 50  0001 C CNN
 F 3 "~" H 8450 3200 50  0001 C CNN
 	1    8450 3200
@@ -823,149 +821,115 @@ F 3 "" H 8600 4600 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	8600 4500 8600 4600
-Wire Wire Line
-	8850 4150 8900 4150
-Connection ~ 8900 4150
-Wire Wire Line
-	8900 4150 8950 4150
 $Comp
 L Device:C_Small C?
 U 1 1 5CB45D4E
-P 9400 3850
-F 0 "C?" H 9410 3920 50  0000 L CNN
-F 1 "C_Small" H 9410 3770 50  0000 L CNN
-F 2 "" H 9400 3850 50  0001 C CNN
-F 3 "~" H 9400 3850 50  0001 C CNN
-	1    9400 3850
+P 9850 3850
+F 0 "C?" H 9860 3920 50  0000 L CNN
+F 1 "100 pF" H 9860 3770 50  0000 L CNN
+F 2 "" H 9850 3850 50  0001 C CNN
+F 3 "~" H 9850 3850 50  0001 C CNN
+	1    9850 3850
 	0    -1   -1   0   
 $EndComp
-$Comp
-L Device:L_Small L?
-U 1 1 5CB45DB8
-P 9750 4300
-F 0 "L?" H 9780 4340 50  0000 L CNN
-F 1 "L_Small" H 9780 4260 50  0000 L CNN
-F 2 "" H 9750 4300 50  0001 C CNN
-F 3 "~" H 9750 4300 50  0001 C CNN
-	1    9750 4300
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5CB48FE3
-P 9750 4500
-F 0 "#PWR?" H 9750 4250 50  0001 C CNN
-F 1 "GND" H 9750 4350 50  0000 C CNN
-F 2 "" H 9750 4500 50  0001 C CNN
-F 3 "" H 9750 4500 50  0001 C CNN
-	1    9750 4500
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	9750 4400 9750 4500
+	9950 3850 10100 3850
+Connection ~ 10100 3850
 Wire Wire Line
-	9750 4200 9750 3850
-Connection ~ 9750 3850
+	9750 3850 9700 3850
 Wire Wire Line
-	9750 3850 9900 3850
-Wire Wire Line
-	9500 3850 9650 3850
-Connection ~ 9650 3850
-Wire Wire Line
-	9300 3850 9250 3850
-Wire Wire Line
-	9250 3850 9250 3950
+	9700 3850 9700 3950
 $Comp
 L Device:L_Small L?
 U 1 1 5CB55D86
-P 9250 3400
-F 0 "L?" H 9280 3440 50  0000 L CNN
-F 1 "47 nH" H 9280 3360 50  0000 L CNN
-F 2 "" H 9250 3400 50  0001 C CNN
-F 3 "~" H 9250 3400 50  0001 C CNN
-	1    9250 3400
-	1    0    0    -1  
+P 9700 3500
+F 0 "L?" H 9730 3540 50  0000 L CNN
+F 1 "100 nH" H 9730 3460 50  0000 L CNN
+F 2 "" H 9700 3500 50  0001 C CNN
+F 3 "~" H 9700 3500 50  0001 C CNN
+	1    9700 3500
+	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	9250 3500 9250 3850
-Connection ~ 9250 3850
+	9700 3600 9700 3850
+Connection ~ 9700 3850
 $Comp
 L Device:R_Small R?
 U 1 1 5CB594A1
-P 9250 3000
-F 0 "R?" H 9280 3020 50  0000 L CNN
-F 1 "22R" H 9280 2960 50  0000 L CNN
-F 2 "" H 9250 3000 50  0001 C CNN
-F 3 "~" H 9250 3000 50  0001 C CNN
-	1    9250 3000
+P 9700 3000
+F 0 "R?" H 9730 3020 50  0000 L CNN
+F 1 "10R" H 9730 2960 50  0000 L CNN
+F 2 "" H 9700 3000 50  0001 C CNN
+F 3 "~" H 9700 3000 50  0001 C CNN
+	1    9700 3000
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C_Small C?
 U 1 1 5CB5CE26
-P 9950 2950
-F 0 "C?" H 9960 3020 50  0000 L CNN
-F 1 "10 nF" H 9960 2870 50  0000 L CNN
-F 2 "" H 9950 2950 50  0001 C CNN
-F 3 "~" H 9950 2950 50  0001 C CNN
-	1    9950 2950
+P 10400 2950
+F 0 "C?" H 10410 3020 50  0000 L CNN
+F 1 "100 pF" H 10410 2870 50  0000 L CNN
+F 2 "" H 10400 2950 50  0001 C CNN
+F 3 "~" H 10400 2950 50  0001 C CNN
+	1    10400 2950
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C_Small C?
 U 1 1 5CB5CE2D
-P 10350 2950
-F 0 "C?" H 10360 3020 50  0000 L CNN
-F 1 "10 nF" H 10360 2870 50  0000 L CNN
-F 2 "" H 10350 2950 50  0001 C CNN
-F 3 "~" H 10350 2950 50  0001 C CNN
-	1    10350 2950
+P 10800 2950
+F 0 "C?" H 10810 3020 50  0000 L CNN
+F 1 "1 nF" H 10810 2870 50  0000 L CNN
+F 2 "" H 10800 2950 50  0001 C CNN
+F 3 "~" H 10800 2950 50  0001 C CNN
+	1    10800 2950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10350 2850 10350 2750
+	10800 2850 10800 2750
 Wire Wire Line
-	10350 2750 9950 2750
+	10800 2750 10400 2750
 Wire Wire Line
-	9950 2750 9950 2850
+	10400 2750 10400 2850
 Wire Wire Line
-	9950 2750 9750 2750
-Connection ~ 9950 2750
+	10400 2750 10200 2750
+Connection ~ 10400 2750
 $Comp
 L power:GND #PWR?
 U 1 1 5CB5CE39
-P 9950 3100
-F 0 "#PWR?" H 9950 2850 50  0001 C CNN
-F 1 "GND" H 9950 2950 50  0000 C CNN
-F 2 "" H 9950 3100 50  0001 C CNN
-F 3 "" H 9950 3100 50  0001 C CNN
-	1    9950 3100
+P 10400 3100
+F 0 "#PWR?" H 10400 2850 50  0001 C CNN
+F 1 "GND" H 10400 2950 50  0000 C CNN
+F 2 "" H 10400 3100 50  0001 C CNN
+F 3 "" H 10400 3100 50  0001 C CNN
+	1    10400 3100
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5CB5CE3F
-P 10350 3100
-F 0 "#PWR?" H 10350 2850 50  0001 C CNN
-F 1 "GND" H 10350 2950 50  0000 C CNN
-F 2 "" H 10350 3100 50  0001 C CNN
-F 3 "" H 10350 3100 50  0001 C CNN
-	1    10350 3100
+P 10800 3100
+F 0 "#PWR?" H 10800 2850 50  0001 C CNN
+F 1 "GND" H 10800 2950 50  0000 C CNN
+F 2 "" H 10800 3100 50  0001 C CNN
+F 3 "" H 10800 3100 50  0001 C CNN
+	1    10800 3100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10350 3100 10350 3050
+	10800 3100 10800 3050
 Wire Wire Line
-	9950 3050 9950 3100
+	10400 3050 10400 3100
 Wire Wire Line
-	9750 2750 9750 3200
+	10200 2750 10200 3200
 Wire Wire Line
-	9750 3200 9250 3200
+	10200 3200 9700 3200
 Wire Wire Line
-	9250 3200 9250 3300
+	9700 3200 9700 3400
 Wire Wire Line
-	9250 3100 9250 3150
-Connection ~ 9250 3200
+	9700 3100 9700 3150
+Connection ~ 9700 3200
 $Comp
 L Device:R_Small R?
 U 1 1 5CB71150
@@ -1007,25 +971,113 @@ Wire Wire Line
 Wire Wire Line
 	9100 2950 9100 3150
 Wire Wire Line
-	9100 3150 9250 3150
-Connection ~ 9250 3150
+	9100 3150 9700 3150
+Connection ~ 9700 3150
 Wire Wire Line
-	9250 3150 9250 3200
-Wire Wire Line
-	8900 3400 8900 4150
-Connection ~ 8900 3400
-Text Notes 9100 4750 0    50   ~ 0
-~~10 dB gain
-Text Notes 8550 2300 0    50   ~ 0
-TODO figure out DC biasing network
-Text Label 9250 2700 0    50   ~ 0
+	9700 3150 9700 3200
+Text Notes 9300 4800 0    50   ~ 0
+~~20 dB gain according to SPICE model,\n~~17 dB gain to S parameter model in scikit-rf
+Text Label 9700 2700 0    50   ~ 0
 5V
-Text Notes 9400 2500 0    50   ~ 0
-10 mA bias current
+Text Notes 9850 2500 0    50   ~ 0
+20 mA bias current
 Text Notes 9400 4950 0    50   ~ 0
-Compression point should at ~~4dBm
-Text HLabel 9250 2600 1    50   Input ~ 0
+Compression point should at ~~-10dBm
+Text HLabel 9700 2600 1    50   Input ~ 0
 +5V0
 Wire Wire Line
-	9250 2600 9250 2900
+	9700 2600 9700 2900
+Wire Wire Line
+	10100 3850 10350 3850
+$Comp
+L Device:R_Small R?
+U 1 1 5CB3952B
+P 9100 4150
+F 0 "R?" H 9130 4170 50  0000 L CNN
+F 1 "10R" H 9130 4110 50  0000 L CNN
+F 2 "" H 9100 4150 50  0001 C CNN
+F 3 "~" H 9100 4150 50  0001 C CNN
+	1    9100 4150
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	9200 4150 9300 4150
+Wire Wire Line
+	8850 4150 9000 4150
+Wire Wire Line
+	8900 3400 9300 3400
+Wire Wire Line
+	9300 3400 9300 4150
+Connection ~ 8900 3400
+Connection ~ 9300 4150
+Wire Wire Line
+	9300 4150 9400 4150
+Text Notes 6700 4900 0    50   ~ 0
+TODO figure out attenuator values to get -20 dB and -13 dB
+Text Notes 10250 3500 0    50   ~ 0
+Target is ~~+6dBm
+$Comp
+L Device:C_Small C?
+U 1 1 5CB63054
+P 2750 2750
+F 0 "C?" H 2760 2820 50  0000 L CNN
+F 1 "100 nF" H 2760 2670 50  0000 L CNN
+F 2 "" H 2750 2750 50  0001 C CNN
+F 3 "~" H 2750 2750 50  0001 C CNN
+	1    2750 2750
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5CB6305A
+P 2350 2750
+F 0 "C?" H 2360 2820 50  0000 L CNN
+F 1 "100 nF" H 2360 2670 50  0000 L CNN
+F 2 "" H 2350 2750 50  0001 C CNN
+F 3 "~" H 2350 2750 50  0001 C CNN
+	1    2350 2750
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 2650 2350 2550
+Wire Wire Line
+	2350 2550 2750 2550
+Wire Wire Line
+	2750 2550 2750 2650
+Connection ~ 2750 2550
+$Comp
+L power:GND #PWR?
+U 1 1 5CB63065
+P 2750 2900
+F 0 "#PWR?" H 2750 2650 50  0001 C CNN
+F 1 "GND" H 2750 2750 50  0000 C CNN
+F 2 "" H 2750 2900 50  0001 C CNN
+F 3 "" H 2750 2900 50  0001 C CNN
+	1    2750 2900
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5CB6306B
+P 2350 2900
+F 0 "#PWR?" H 2350 2650 50  0001 C CNN
+F 1 "GND" H 2350 2750 50  0000 C CNN
+F 2 "" H 2350 2900 50  0001 C CNN
+F 3 "" H 2350 2900 50  0001 C CNN
+	1    2350 2900
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 2900 2350 2850
+Wire Wire Line
+	2750 2850 2750 2900
+Wire Wire Line
+	3200 2550 3200 3250
+Wire Wire Line
+	2750 2550 3200 2550
+Wire Wire Line
+	2350 2550 2300 2550
+Connection ~ 2350 2550
+Text Notes 5050 4650 0    50   ~ 0
+TODO figure out loop filter\ncircuitry
 $EndSCHEMATC

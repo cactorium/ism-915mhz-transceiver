@@ -1,6 +1,6 @@
 <Qucs Schematic 0.0.19>
 <Properties>
-  <View=0,-133,1184,663,1,0,0>
+  <View=0,-73,1184,831,1,0,300>
   <Grid=10,10,1>
   <DataSet=bfu520_lo_amplifier.dat>
   <DataDisplay=bfu520_lo_amplifier.dpl>
@@ -16,7 +16,7 @@
 <Symbol>
 </Symbol>
 <Components>
-  <L L1 1 490 60 -26 10 0 0 "470 nH" 1 "" 0>
+  <L L1 1 490 60 -26 10 0 0 "100 nH" 1 "" 0>
   <GND * 1 180 140 0 0 0 0>
   <Vdc V2 1 180 90 18 -26 0 1 "5 V" 1>
   <C C2 1 620 180 -26 17 0 0 "100 pF" 1 "" 0 "neutral" 0>
