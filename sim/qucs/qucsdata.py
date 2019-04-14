@@ -53,7 +53,8 @@ class QucsData:
 
                 if '<indep' in line:
                     # independent variables
-                    r = re.match(r'(\S+) (\S+) (\d+)', line.translate(None,"<>"))
+                    stripbrackets = str.maketrans(dict.fromkeys("<>"))
+                    r = re.match(r'(\S+) (\S+) (\d+)', line.translate(stripbrackets))
                     kind, identifier, size =  r.groups()
                     # collect identifiers
                     self.names.append(identifier)
@@ -63,7 +64,8 @@ class QucsData:
                 if '<dep' in line:
                     # dependent variables
                     # one or more independent, y=f(v,w,...)
-                    r = re.findall('(\S+)', line.translate(None,"<>"))
+                    stripbrackets = str.maketrans(dict.fromkeys("<>"))
+                    r = re.findall('(\S+)', line.translate(stripbrackets))
                     identifier = r[1]
                     self.dependent[identifier]= r[2:]
                     self.names.append(identifier)
