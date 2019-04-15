@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 4
+Sheet 2 6
 Title ""
 Date ""
 Rev ""
@@ -510,12 +510,15 @@ Wire Wire Line
 $Comp
 L discrete-parts:HHM17147A1 U?
 U 1 1 5CAFA1BF
-P 7050 4100
-F 0 "U?" H 7050 4100 50  0000 C CNN
-F 1 "HHM17147A1" H 7050 3600 50  0000 C CNN
-F 2 "" H 7050 4100 50  0001 C CNN
-F 3 "" H 7050 4100 50  0001 C CNN
-	1    7050 4100
+P 7050 4350
+AR Path="/5CAFA1BF" Ref="U?"  Part="1" 
+AR Path="/5CA6B046/5CAFA1BF" Ref="U?"  Part="1" 
+F 0 "U?" H 7050 4550 50  0000 C CNN
+F 1 "HHM17147A1" H 7050 4150 50  0000 C CNN
+F 2 "" H 7050 4350 50  0001 C CNN
+F 3 "" H 7050 4350 50  0001 C CNN
+F 4 "810-HHM17147A1" H 7050 4350 50  0001 C CNN "Mouser"
+	1    7050 4350
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -981,8 +984,8 @@ Text Label 9450 2750 0    50   ~ 0
 5V
 Text Notes 9600 2550 0    50   ~ 0
 20 mA bias current
-Text Notes 9150 5000 0    50   ~ 0
-Compression point should at ~~-10dBm
+Text Notes 8550 5150 0    50   ~ 0
+Compression point should at ~~-10dBm (~~+10 dBm at output)
 Text HLabel 9450 2650 1    50   Input ~ 0
 +5V0
 Wire Wire Line
