@@ -1,0 +1,27 @@
+
+.Def:bat15_099r_cir _net100 _net300 _net400 _net200 _ref
+  .Def:SOT143_D _ref _net100 _net200 _net300 _net400
+  L:L3I _net3 _net30 L="0.5n"
+  L:L4I _net4 _net40 L="0.5n"
+  C:C12 _net1 _net2 C="126f"
+  C:C23 _net2 _net30 C="84f"
+  C:C34 _net30 _net40 C="7f"
+  C:C14 _net1 _net40 C="165f"
+  C:C13 _net1 _net30 C="82f"
+  C:C24 _net2 _net40 C="7f"
+  L:L1O _net1 _net100 L="0.14n"
+  L:L2O _net2 _net200 L="0.5n"
+  L:L3O _net30 _net300 L="0.5n"
+  L:L4O _net40 _net400 L="0.5n"
+  .Def:D315 _ref _net1 _net2
+  Diode:D1 _net2 _net1 Is="74n" N="1.07" Rs="5" Xti="1.5" Eg="0.59" Cj0="138.5f" M="0.138" Vj="0.224" Fc="0.5" Tt="3p" Bv="4.2" Ibv="100u"
+  R:R1 _net1 _net2 R="1.5e+07"
+  .Def:End
+  Sub:X1 _ref _net1 _net3 Type="D315"
+  Sub:X2 _ref _net3 _net2 Type="D315"
+  Sub:X3 _ref _net2 _net4 Type="D315"
+  Sub:X4 _ref _net4 _net1 Type="D315"
+  .Def:End
+  Sub:X1 _ref _net100 _net200 _net300 _net400 Type="SOT143_D"
+.Def:End
+

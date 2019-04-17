@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 6
+Sheet 8 8
 Title ""
 Date ""
 Rev ""
@@ -987,7 +987,7 @@ Text Notes 9600 2550 0    50   ~ 0
 Text Notes 8550 5150 0    50   ~ 0
 Compression point should at ~~-10dBm (~~+10 dBm at output)
 Text HLabel 9450 2650 1    50   Input ~ 0
-+5V0
+5V0
 Wire Wire Line
 	9450 2650 9450 2950
 Wire Wire Line

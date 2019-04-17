@@ -1,0 +1,94 @@
+* trying to patch together a model for bat15-099r, since Infineon doesn't seem to have one
+* I'm using the diode chip model for the bat15-099 and just stick four of them
+* in him
+******************************************************************
+* INFINEON Discrete & RF Semiconductors
+* RF-PACKAGE EQUIVALENT CIRCUIT  (SPICE SYNTAX)
+* VALID UP TO 12 GHZ
+* >>> DUAL DIODES IN SOT143 <<<
+* FILENAME: SOT143_D_v2.TXT
+* (C) 2003 Infineon Technologies AG
+* Version 2               August 2003              A. Boehme
+******************************************************************
+*
+*             L1O
+* (100) P1 O--LLL----+----------+-------+----------------O P1' (1)
+*                    |          |       |
+*                  -----        |     -----
+*                  ----- C12    |     ----- C13
+*             L2O    |          |       |
+* (200) P2 O--LLL----+----------------------+------------O P2' (2)
+*                    |          |       |   |
+*                  -----      -----     |   |
+*                  ----- C23  ----- C14 |   |
+*             L3O    |          |       |   |       L3I
+* (300) P3 O--LLL----+------------------+-----------LLL--O P3' (3)
+*                    |          |     (30)  |
+*                  -----        |         -----
+*                  ----- C34    |         ----- C24
+*             L4O    |          |           |        L4I
+* (400) P4 O--LLL----+----------+-----------+-------LLL--O P4' (4)
+*                                         (40)
+*
+* 1    = CATHODE OF CHIP MODEL DIODE 1
+* 2    = CATHODE OF CHIP MODEL DIODE 2 (PARALLEL PAIR)
+* 2    = ANODE   OF CHIP MODEL DIODE 2 (ANTI-PARALLEL PAIR)
+* 3    = ANODE   OF CHIP MODEL DIODE 2 (PARALLEL PAIR)
+* 3    = CATHODE OF CHIP MODEL DIODE 2 (ANTI-PARALLEL PAIR)
+* 4    = ANODE OF CHIP MODEL DIODE 1
+* 100  = PIN 1 OF COMPLETE ASSEMBLY, CATHODE DIODE 1
+* 200  = PIN 2 OF COMPLETE ASSEMBLY, CATHODE DIODE 2 (PARALLEL PAIR)
+* 200  = PIN 2 OF COMPLETE ASSEMBLY, ANODE   DIODE 2 (ANTI-PARALLEL PAIR)
+* 300  = PIN 3 OF COMPLETE ASSEMBLY, ANODE   DIODE 2 (PARALLEL PAIR)
+* 300  = PIN 3 OF COMPLETE ASSEMBLY, CATHODE DIODE 2 (ANTI-PARALLEL PAIR)
+* 400  = PIN 4 OF COMPLETE ASSEMBLY, ANODE   DIODE 1
+*
+.SUBCKT SOT143_D 100 200 300 400
+L3I    3    30   L=0.50n
+L4I    4    40   L=0.50n
+C12    1     2   C=126f
+C23    2    30   C=84f
+C34   30    40   C=7f
+C14    1    40   C=165f
+C13    1    30   C=82f
+C24    2    40   C=7f
+L1O    1   100   L=0.14n
+L2O    2   200   L=0.50n
+L3O   30   300   L=0.50n
+L4O   40   400   L=0.50n
+
+*********************************************************************
+* Infineon Technologies Discrete & RF Semiconductors                *
+* SPICE2G6 Model:  Schottky Diode BAT15 series (Chip model)         *
+* Filename:        D315_v7.txt                                      *
+* Version:         7.0                                              *
+* Date:            Feb 2003                                         *
+* Author:          A. Boehme                                        *
+*********************************************************************
+* -Parallel-resistor R1 for a better reverse behaviour.             *
+* -The temperature-dependence of the reverse breakdown voltage and  *
+*  the ohmic series resistance (parameter RS) are in SPICE2G6 not   *
+*  adaptable.                                                       *
+* -Model needs a very low parameter Vj. The value is limited        *
+*  to 0.224 for model-use at 85 degC. This value can produce        *
+*  simulator-warnings at higher temperatures.                       *
+*********************************************************************
+.SUBCKT D315  1  2
+D1  1  2  D1
+R1  1  2  15e6
+.MODEL D1 D(IS=74.0n N=1.07 RS=5.0 XTI=1.5 EG=0.59
++ CJO=138.5f M=0.138 VJ=0.224 FC=0.5 TT=3.0p BV=4.2 IBV=100.0u)
+.ENDS D315
+
+X1  1   3   D315
+X2  3   2   D315
+X3  2   4   D315
+X4  4   1   D315
+
+.ENDS SOT143_D
+******************************************************************
+* Add Spice model or discrete equivalent circuit for chip
+* between terminals (1) and (4) respectively (2) and (3)
+******************************************************************
+
+.END
