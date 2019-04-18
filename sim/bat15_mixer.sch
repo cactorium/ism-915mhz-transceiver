@@ -1,6 +1,6 @@
 <Qucs Schematic 0.0.19>
 <Properties>
-  <View=-565,-69,1150,1288,0.564475,0,120>
+  <View=-592,111,1451,1353,0.51316,0,0>
   <Grid=10,10,1>
   <DataSet=bat15_mixer.dat>
   <DataDisplay=bat15_mixer.dpl>
@@ -24,9 +24,6 @@
   <Eqn Eqn3 1 200 650 -31 15 0 0 "alo=(lo2.Vt+Zlo*ilo)/sqrt(Zlo)" 1 "yes" 0>
   <Eqn Eqn4 1 200 720 -31 15 0 0 "blo=(lo2.Vt-Zlo*ilo)/sqrt(Zlo)" 1 "yes" 0>
   <Eqn Eqn5 1 410 640 -31 15 0 0 "s11_mag=rms(blo)/rms(alo)" 1 "yes" 0>
-  <Eqn Eqn6 1 410 720 -31 15 0 0 "s11_phase=avg(phase_blo-phase_alo)*180/pi" 1 "yes" 0>
-  <Eqn Eqn7 1 90 830 -31 15 0 0 "phase_blo=arctan(blo*sin(2*pi*915e+6*time),blo*cos(2*pi*915e+6*time))" 1 "yes" 0>
-  <Eqn Eqn8 1 90 910 -31 15 0 0 "phase_alo=arctan(alo*sin(2*pi*915e+6*time),alo*cos(2*pi*915e+6*time))" 1 "yes" 0>
   <Eqn Eqn9 1 -170 600 -31 15 0 0 "Zlo=50" 1 "yes" 0>
   <Eqn Eqn10 1 640 630 -31 15 0 0 "zlo_eff=rms(lo2.Vt)/rms(ilo)" 1 "yes" 0>
   <GND * 1 -120 260 0 0 0 0>
@@ -41,29 +38,42 @@
   <C C6 1 -70 230 17 -26 0 1 "3.3 pF" 1 "" 0 "neutral" 0>
   <Eqn Eqn12 1 -400 600 -31 15 0 0 "arf=(rf2.Vt+50*irf)/sqrt(50)" 1 "yes" 0>
   <Eqn Eqn13 1 -390 670 -31 15 0 0 "brf=(rf2.Vt-50*irf)/sqrt(50)" 1 "yes" 0>
-  <Eqn Eqn14 1 -460 740 -31 15 0 0 "phase_brf=arctan(brf*sin(2*pi*920e+6*time),brf*cos(2*pi*920e+6*time))" 1 "yes" 0>
-  <Eqn Eqn15 1 -470 810 -31 15 0 0 "phase_arf=arctan(arf*sin(2*pi*920e+6*time),arf*cos(2*pi*920e+6*time))" 1 "yes" 0>
-  <Eqn Eqn17 1 -460 970 -31 15 0 0 "s22_phase=avg(phase_brf-phase_arf)*180/pi" 1 "yes" 0>
-  <Eqn Eqn18 1 -430 1050 -31 15 0 0 "zrf_eff=rms(rf2.Vt)/rms(irf)" 1 "yes" 0>
   <Eqn Eqn19 1 -510 470 -31 15 0 0 "rf_s=sin(2*pi*920e+6*time)" 1 "yes" 0>
   <Eqn Eqn20 1 -270 460 -31 15 0 0 "rf_c=cos(2*pi*920e+6*time)" 1 "yes" 0>
-  <Eqn Eqn16 1 -470 1130 -31 15 0 0 "s22_mag=sqrt(avg(brf*rf_s)^2+avg(brf*rf_c)^2)/sqrt(avg(arf*rf_s)^2+avg(brf*rf_c)^2)" 1 "yes" 0>
   <GND * 1 900 310 0 0 0 0>
   <GND * 1 770 510 0 0 0 0>
   <L L1 1 790 260 -26 10 0 0 "470 nH" 1 "" 0>
   <R R3 1 940 230 -26 15 0 0 "50 Ohm" 1 "26.85" 0 "0.0" 0 "0.0" 0 "26.85" 0 "european" 0>
   <GND * 1 950 520 0 0 0 0>
   <sTr Tr2 1 850 260 -29 78 0 0 "0.707" 1 "0.707" 1>
-  <R R4 1 900 370 -26 15 0 0 "100 Ohm" 1 "26.85" 0 "0.0" 0 "0.0" 0 "26.85" 0 "european" 0>
   <C C1 1 950 480 17 -26 0 1 "47 pF" 1 "" 0 "neutral" 0>
   <L L10 1 630 190 -26 10 0 0 "14 nH" 1 "" 0>
-  <.TR TR1 1 240 470 0 62 0 0 "lin" 1 "1 ns" 1 "250 ns" 1 "3001" 0 "Gear" 0 "2" 0 "1 ns" 0 "1e-16" 0 "150" 0 "0.001" 0 "1 pA" 0 "1 uV" 0 "26.85" 0 "1e-3" 0 "1e-6" 0 "1" 0 "CroutLU" 0 "no" 0 "yes" 0 "0" 0>
   <L L11 1 650 330 -26 10 0 0 "14 nH" 1 "" 0>
   <C C10 1 700 240 17 -26 0 1 "2.5 pF" 1 "" 0 "neutral" 0>
   <C C11 1 540 270 17 -26 0 1 "1.2 pF" 1 "" 0 "neutral" 0>
   <Vac V1 1 -460 240 -76 -26 1 1 "0.4 V" 1 "915 MHz" 0 "0" 0 "0" 0>
-  <Vac V2 1 1040 260 18 -26 0 1 "0.01 V" 1 "920 MHz" 0 "0" 0 "0" 0>
-  <R R1 1 770 400 15 -26 0 1 "1 kOhm" 1 "26.85" 0 "0.0" 0 "0.0" 0 "26.85" 0 "european" 0>
+  <R R1 1 770 400 15 -26 0 1 "200 Ohm" 1 "26.85" 0 "0.0" 0 "0.0" 0 "26.85" 0 "european" 0>
+  <R R4 1 900 370 -26 15 0 0 "200 Ohm" 1 "26.85" 0 "0.0" 0 "0.0" 0 "26.85" 0 "european" 0>
+  <.TR TR1 1 240 470 0 62 0 0 "lin" 1 "1 ns" 1 "250 ns" 1 "4001" 0 "Gear" 0 "2" 0 "1 ns" 0 "1e-16" 0 "150" 0 "0.001" 0 "1 pA" 0 "1 uV" 0 "26.85" 0 "1e-3" 0 "1e-6" 0 "1" 0 "CroutLU" 0 "no" 0 "yes" 0 "0" 0>
+  <Vac V2 1 1040 260 18 -26 0 1 "0.01 V" 1 "916 MHz" 0 "0" 0 "0" 0>
+  <Eqn Eqn21 1 -500 730 -31 15 0 0 "brf_s=cumsum(brf*rf_s)" 1 "yes" 0>
+  <Eqn Eqn22 1 -290 740 -31 15 0 0 "brf_c=cumsum(brf*rf_c)" 1 "yes" 0>
+  <Eqn Eqn14 1 -500 890 -31 15 0 0 "phase_brf=arctan(brf_c,brf_s)" 1 "yes" 0>
+  <Eqn Eqn23 1 -500 800 -31 15 0 0 "arf_s=cumsum(arf*rf_s)" 1 "yes" 0>
+  <Eqn Eqn24 1 -290 810 -31 15 0 0 "arf_c=cumsum(arf*rf_c)" 1 "yes" 0>
+  <Eqn Eqn15 1 -500 970 -31 15 0 0 "phase_arf=arctan(arf_c,arf_s)" 1 "yes" 0>
+  <Eqn Eqn17 1 -500 1050 -31 15 0 0 "s22_phase=(phase_brf[length(phase_brf)-1]-phase_arf[length(phase_arf)-1])*180/pi" 1 "yes" 0>
+  <Eqn Eqn18 1 -500 1130 -31 15 0 0 "zrf_eff=rms(rf2.Vt)/rms(irf)" 1 "yes" 0>
+  <Eqn Eqn16 1 -510 1210 -31 15 0 0 "s22_mag=sqrt(avg(brf*rf_s)^2+avg(brf*rf_c)^2)/sqrt(avg(arf*rf_s)^2+avg(brf*rf_c)^2)" 1 "yes" 0>
+  <Eqn Eqn25 1 10 800 -31 15 0 0 "lo_s=sin(2*pi*915e+6*time)" 1 "yes" 0>
+  <Eqn Eqn26 1 240 790 -31 15 0 0 "lo_c=cos(2*pi*915e+6*time)" 1 "yes" 0>
+  <Eqn Eqn27 1 120 900 -31 15 0 0 "blo_s=cumsum(blo*lo_s)" 1 "yes" 0>
+  <Eqn Eqn28 1 330 910 -31 15 0 0 "blo_c=cumsum(blo*lo_c)" 1 "yes" 0>
+  <Eqn Eqn29 1 120 970 -31 15 0 0 "alo_s=cumsum(alo*lo_s)" 1 "yes" 0>
+  <Eqn Eqn30 1 330 980 -31 15 0 0 "alo_c=cumsum(alo*lo_c)" 1 "yes" 0>
+  <Eqn Eqn31 1 180 1060 -31 15 0 0 "phase_blo=arctan(blo_c,blo_s)" 1 "yes" 0>
+  <Eqn Eqn32 1 180 1140 -31 15 0 0 "phase_alo=arctan(alo_c,alo_s)" 1 "yes" 0>
+  <Eqn Eqn33 1 450 720 -31 15 0 0 "s11_phase=(phase_blo[length(phase_blo)-1]-phase_alo[length(phase_alo)-1])*180/pi" 1 "yes" 0>
 </Components>
 <Wires>
   <290 280 290 360 "" 0 0 0 "">
