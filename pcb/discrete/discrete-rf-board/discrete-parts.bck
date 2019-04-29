@@ -4,8 +4,21 @@ $CMP ADF4360-7BCPZRL7
 D Phase Locked Loops - PLL Intg Integer-N VCO Out Freq 350-1800
 $ENDCMP
 #
+$CMP BGS12PL6E6327XTSA1
+D RF Switch ICs CMOS SWITCH SPDT
+$ENDCMP
+#
+$CMP HHM1515B2
+D Signal Conditioning BALUN RF 880-960MHz 200 ohms
+$ENDCMP
+#
+$CMP HHM1522E3
+D Signal Conditioning Multilayer Balun 680-1100MHz 50 ohms
+$ENDCMP
+#
 $CMP HHM17147A1
 D Signal Conditioning Multilyer Balun 673-2700MHz 100 ohms
+K balun, filtering
 $ENDCMP
 #
 #End Doc Library
