@@ -1,6 +1,6 @@
 <Qucs Schematic 0.0.19>
 <Properties>
-  <View=-687,-172,1287,1317,0.620924,232,52>
+  <View=-625,-189,1186,1303,0.683017,0,0>
   <Grid=10,10,1>
   <DataSet=bat15_mixer_upconverter.dat>
   <DataDisplay=bat15_mixer_upconverter.dpl>
@@ -68,14 +68,14 @@
   <Eqn Eqn34 1 460 800 -31 15 0 0 "s11_mag=sqrt(avg(blo*lo_s)^2+avg(blo*lo_c)^2)/sqrt(avg(alo*lo_s)^2+avg(blo*lo_c)^2)" 1 "yes" 0>
   <C C10 1 700 240 17 -26 0 1 "2.5  pF" 1 "" 0 "neutral" 0>
   <C C11 1 540 270 17 -26 0 1 "1.1 pF" 1 "" 0 "neutral" 0>
-  <Vac V1 1 -460 240 -76 -26 1 1 "0.4 V" 1 "915 MHz" 0 "0" 0 "0" 0>
   <GND * 1 1090 510 0 0 0 0>
   <Eqn Eqn35 1 710 1090 -31 15 0 0 "rf_beat=rf2.Vt*lo_s" 1 "yes" 0>
   <Eqn Eqn36 1 690 1230 -31 15 0 0 "rf_fft=fft(rf2.Vt)" 1 "yes" 0>
-  <.TR TR1 1 240 470 0 62 0 0 "lin" 1 "1 ns" 1 "2000 ns" 1 "10001" 0 "Gear" 0 "2" 0 "1 ns" 0 "1e-16" 0 "150" 0 "0.001" 0 "1 pA" 0 "1 uV" 0 "26.85" 0 "1e-3" 0 "1e-6" 0 "1" 0 "CroutLU" 0 "no" 0 "yes" 0 "0" 0>
-  <Vac V2 1 1090 450 18 -26 0 1 "0.2 V" 1 "1 MHz" 0 "0" 0 "0" 0>
+  <.TR TR1 1 240 470 0 62 0 0 "lin" 1 "1 ns" 1 "4000 ns" 1 "10001" 0 "Gear" 0 "2" 0 "1 ns" 0 "1e-16" 0 "150" 0 "0.001" 0 "1 pA" 0 "1 uV" 0 "26.85" 0 "1e-3" 0 "1e-6" 0 "1" 0 "CroutLU" 0 "no" 0 "yes" 0 "0" 0>
   <R R1 1 770 400 15 -26 0 1 "1k Ohm" 1 "26.85" 0 "0.0" 0 "0.0" 0 "26.85" 0 "european" 0>
   <R R4 1 900 370 -26 15 0 0 "100 Ohm" 1 "26.85" 0 "0.0" 0 "0.0" 0 "26.85" 0 "european" 0>
+  <Vac V2 1 1090 450 18 -26 0 1 "0.4 V" 1 "2 MHz" 0 "0" 0 "0" 0>
+  <Vac V1 1 -460 240 -76 -26 1 1 "0.5 V" 1 "915 MHz" 0 "0" 0 "0" 0>
 </Components>
 <Wires>
   <290 280 290 360 "" 0 0 0 "">
