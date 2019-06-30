@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8
-Sheet 1 11
+Sheet 1 16
 Title ""
 Date ""
 Rev ""
@@ -114,4 +114,6 @@ F 3 "" H 4350 4100 50  0001 C CNN
 	1    4350 4100
 	1    0    0    -1  
 $EndComp
+Text Notes 9150 2800 0    50   ~ 0
+TODO add simple BPF here
 $EndSCHEMATC

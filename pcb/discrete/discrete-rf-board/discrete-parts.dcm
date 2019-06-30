@@ -8,6 +8,12 @@ $CMP BGS12PL6E6327XTSA1
 D RF Switch ICs CMOS SWITCH SPDT
 $ENDCMP
 #
+$CMP BGSA11GN10
+D RF Switch ICs CMOS SWITCH
+K Analog Switch SPST
+F  http://www.ti.com/lit/ds/symlink/ts5a3166.pdf
+$ENDCMP
+#
 $CMP HHM1515B2
 D Signal Conditioning BALUN RF 880-960MHz 200 ohms
 $ENDCMP
