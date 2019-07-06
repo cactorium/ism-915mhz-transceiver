@@ -27,4 +27,14 @@ D Signal Conditioning Multilyer Balun 673-2700MHz 100 ohms
 K balun, filtering
 $ENDCMP
 #
+$CMP PD0810J5050S2HF
+D Signal Conditioning 800-1000MHz 50 Ohm IL=.8dB Ultra Low Profile 0805 Power Divider 
+K power splitter combiner
+$ENDCMP
+#
+$CMP SF2098H
+D Signal Conditioning 915MHZ
+K bandpass filter rf
+$ENDCMP
+#
 #End Doc Library
