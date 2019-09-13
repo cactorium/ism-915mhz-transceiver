@@ -4,7 +4,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 13 19
+Sheet 2 19
 Title ""
 Date ""
 Rev ""
@@ -52,34 +52,34 @@ F 3 "" H 7550 3000 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	6850 3350 6100 3350
+	6850 3350 6750 3350
 Wire Wire Line
-	6100 3350 6100 2700
+	6750 3350 6750 2700
 Wire Wire Line
-	6100 2700 5850 2700
+	6750 2700 5850 2700
 Wire Wire Line
-	5850 4500 6100 4500
+	5850 4500 6750 4500
 Wire Wire Line
-	6100 4500 6100 3750
+	6750 4500 6750 3750
 Wire Wire Line
-	6100 3750 6850 3750
+	6750 3750 6850 3750
 $Comp
 L Device:R_Small R?
 U 1 1 5D7F54C0
-P 6100 3550
-F 0 "R?" H 6130 3570 50  0000 L CNN
-F 1 "51R" H 6130 3510 50  0000 L CNN
-F 2 "" H 6100 3550 50  0001 C CNN
-F 3 "~" H 6100 3550 50  0001 C CNN
-	1    6100 3550
+P 6750 3550
+F 0 "R?" H 6780 3570 50  0000 L CNN
+F 1 "51R" H 6780 3510 50  0000 L CNN
+F 2 "" H 6750 3550 50  0001 C CNN
+F 3 "~" H 6750 3550 50  0001 C CNN
+	1    6750 3550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6100 3650 6100 3750
-Connection ~ 6100 3750
+	6750 3650 6750 3750
+Connection ~ 6750 3750
 Wire Wire Line
-	6100 3450 6100 3350
-Connection ~ 6100 3350
+	6750 3450 6750 3350
+Connection ~ 6750 3350
 $Comp
 L power:GND #PWR?
 U 1 1 5D7F5C8F
@@ -106,11 +106,11 @@ Wire Wire Line
 	7350 4050 7450 4050
 Connection ~ 7450 4050
 Wire Wire Line
-	3300 4200 3650 4200
+	3050 4200 3650 4200
 Wire Wire Line
-	3300 3900 3300 4200
+	3050 3900 3050 4200
 Wire Wire Line
-	3300 2500 3650 2500
+	3050 2500 3650 2500
 Text HLabel 1050 3700 0    50   Input ~ 0
 LO
 Wire Wire Line
@@ -120,18 +120,23 @@ S 8050 2950 1200 1550
 U 5D830BD7
 F0 "PowerAmplifier" 50
 F1 "pa.sch" 50
+F2 "IN" I L 8050 3550 50 
+F3 "OUT" I R 9250 3550 50 
+F4 "+5V0" I R 9250 3050 50 
 $EndSheet
 $Sheet
 S 2000 1750 950  1100
 U 5D83265A
 F0 "DacI" 50
 F1 "dac.sch" 50
-$EndSheet
-$Sheet
-S 2150 4800 950  1100
-U 5D8337F2
-F0 "DacQ" 50
-F1 "dac.sch" 50
+F2 "OUT" I R 2950 2650 50 
+F3 "+5V" I L 2000 1900 50 
+F4 "+3V3" I L 2000 2000 50 
+F5 "D0" I L 2000 2300 50 
+F6 "D1" I L 2000 2400 50 
+F7 "D2" I L 2000 2500 50 
+F8 "D3" I L 2000 2600 50 
+F9 "DAC_GND" I L 2000 2750 50 
 $EndSheet
 $Comp
 L discrete-parts:C0810J5003AHF FL?
@@ -181,11 +186,11 @@ $EndComp
 Wire Wire Line
 	1450 3700 1550 3700
 Wire Wire Line
-	2900 3700 3300 3700
+	2900 3700 3050 3700
 Wire Wire Line
-	3300 2500 3300 3700
+	3050 2500 3050 3700
 Wire Wire Line
-	2900 3900 3300 3900
+	2900 3900 3050 3900
 $Comp
 L Device:R_Small R?
 U 1 1 5D8C70E2
@@ -263,10 +268,120 @@ F 3 "" H 2500 4200 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2500 4200 2500 4100
-Text Notes 4850 1050 0    50   ~ 0
-TODO wire up control pins
-Text Notes 4850 1200 0    50   ~ 0
-TODO finish/start DAC design
-Text Notes 4850 1300 0    50   ~ 0
-TODO finish power amplifier design
+Wire Wire Line
+	8050 3550 7800 3550
+Text HLabel 9700 3550 2    50   Input ~ 0
+RF
+Wire Wire Line
+	9700 3550 9250 3550
+Wire Wire Line
+	2950 2650 3150 2650
+Wire Wire Line
+	3150 2650 3150 2950
+Wire Wire Line
+	3150 2950 3650 2950
+$Sheet
+S 2000 4800 950  1100
+U 5D9A8CAE
+F0 "sheet5D9A8CA5" 50
+F1 "dac.sch" 50
+F2 "OUT" I R 2950 5700 50 
+F3 "+5V" I L 2000 4950 50 
+F4 "+3V3" I L 2000 5050 50 
+F5 "D0" I L 2000 5350 50 
+F6 "D1" I L 2000 5450 50 
+F7 "D2" I L 2000 5550 50 
+F8 "D3" I L 2000 5650 50 
+F9 "DAC_GND" I L 2000 5800 50 
+$EndSheet
+Wire Wire Line
+	3200 5700 3200 4700
+Wire Wire Line
+	3200 4700 3650 4700
+Wire Wire Line
+	2950 5700 3200 5700
+Text HLabel 1850 2300 0    50   Input ~ 0
+I_DAC_D0
+Text HLabel 1850 2400 0    50   Input ~ 0
+I_DAC_D1
+Text HLabel 1850 2500 0    50   Input ~ 0
+I_DAC_D2
+Text HLabel 1850 2600 0    50   Input ~ 0
+I_DAC_D3
+Wire Wire Line
+	1850 2300 2000 2300
+Wire Wire Line
+	2000 2400 1850 2400
+Wire Wire Line
+	1850 2500 2000 2500
+Wire Wire Line
+	1850 2600 2000 2600
+Text HLabel 1850 2000 0    50   Input ~ 0
+I_DAC_3V3
+Text HLabel 1850 1900 0    50   Input ~ 0
+I_DAC_5V
+Wire Wire Line
+	1850 1900 2000 1900
+Wire Wire Line
+	2000 2000 1850 2000
+Text HLabel 3550 2200 0    50   Input ~ 0
+I_MIX_EN
+Wire Wire Line
+	3550 2200 3650 2200
+Text HLabel 6000 2200 2    50   Input ~ 0
+I_MIX_3V3
+Text HLabel 6000 2300 2    50   Input ~ 0
+I_MIX_N1V2
+Wire Wire Line
+	6000 2300 5850 2300
+Wire Wire Line
+	5850 2200 6000 2200
+Text HLabel 6000 3950 2    50   Input ~ 0
+Q_MIX_3V3
+Text HLabel 6000 4050 2    50   Input ~ 0
+Q_MIX_N1V2
+Wire Wire Line
+	6000 4050 5850 4050
+Wire Wire Line
+	5850 3950 6000 3950
+Text HLabel 3550 3950 0    50   Input ~ 0
+Q_MIX_EN
+Wire Wire Line
+	3550 3950 3650 3950
+Text HLabel 9450 3050 2    50   Input ~ 0
+PA_5V
+Wire Wire Line
+	9450 3050 9250 3050
+Text HLabel 1800 4950 0    50   Input ~ 0
+Q_DAC_5V
+Text HLabel 1800 5050 0    50   Input ~ 0
+Q_DAC_3V3
+Text HLabel 1800 5350 0    50   Input ~ 0
+Q_DAC_D0
+Text HLabel 1800 5450 0    50   Input ~ 0
+Q_DAC_D1
+Text HLabel 1800 5550 0    50   Input ~ 0
+Q_DAC_D2
+Text HLabel 1800 5650 0    50   Input ~ 0
+Q_DAC_D3
+Wire Wire Line
+	1800 4950 2000 4950
+Wire Wire Line
+	1800 5050 2000 5050
+Wire Wire Line
+	1800 5350 2000 5350
+Wire Wire Line
+	1800 5450 2000 5450
+Wire Wire Line
+	2000 5550 1800 5550
+Wire Wire Line
+	1800 5650 2000 5650
+Text HLabel 1850 2750 0    50   Input ~ 0
+I_DAC_GND
+Wire Wire Line
+	1850 2750 2000 2750
+Text HLabel 1800 5800 0    50   Input ~ 0
+Q_DAC_GND
+Wire Wire Line
+	1800 5800 2000 5800
 $EndSCHEMATC

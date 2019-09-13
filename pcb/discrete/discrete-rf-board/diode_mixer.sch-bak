@@ -280,7 +280,7 @@ Connection ~ 9150 3450
 Text HLabel 9250 3450 2    50   Input ~ 0
 RF
 Wire Wire Line
-	9000 4300 8750 4300
+	9350 4300 9100 4300
 Connection ~ 8750 4300
 Wire Wire Line
 	3400 3600 3400 4950
@@ -324,11 +324,11 @@ Wire Wire Line
 Wire Wire Line
 	8750 4600 8750 4550
 Wire Wire Line
-	9000 4600 8750 4600
+	9350 4600 9100 4600
 Connection ~ 8750 4600
-Text HLabel 9000 4300 2    50   Input ~ 0
+Text HLabel 9350 4300 2    50   Input ~ 0
 IF+
-Text HLabel 9000 4600 2    50   Input ~ 0
+Text HLabel 9350 4600 2    50   Input ~ 0
 IF-
 Wire Wire Line
 	4750 3750 4750 3700
@@ -616,4 +616,29 @@ Wire Wire Line
 	5450 3750 5550 3750
 Text Notes 4850 4350 0    50   ~ 0
 TODO probably add bypass cap, probably ground some part of\nthe balanced mixer to make TL design easier
+$Comp
+L Device:R_Small R?
+U 1 1 5D979A64
+P 9100 4450
+AR Path="/5CA6B0AA/5CC1CC09/5D979A64" Ref="R?"  Part="1" 
+AR Path="/5CA6B0AA/5CC4015A/5D979A64" Ref="R?"  Part="1" 
+F 0 "R?" H 9130 4470 50  0000 L CNN
+F 1 "DNP 0402" H 9130 4410 50  0000 L CNN
+F 2 "" H 9100 4450 50  0001 C CNN
+F 3 "~" H 9100 4450 50  0001 C CNN
+	1    9100 4450
+	1    0    0    -1  
+$EndComp
+Text Notes 9650 4500 0    50   ~ 0
+Use to simulate IF output impedance\nwhile measuring parameters for mixer
+Wire Wire Line
+	9100 4350 9100 4300
+Connection ~ 9100 4300
+Wire Wire Line
+	9100 4300 8750 4300
+Wire Wire Line
+	9100 4550 9100 4600
+Connection ~ 9100 4600
+Wire Wire Line
+	9100 4600 8750 4600
 $EndSCHEMATC

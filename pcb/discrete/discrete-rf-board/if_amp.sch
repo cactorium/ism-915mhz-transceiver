@@ -143,7 +143,7 @@ Wire Wire Line
 Wire Wire Line
 	1650 2500 2050 2500
 Wire Wire Line
-	2050 2500 2050 2350
+	2050 2500 2050 2450
 Wire Wire Line
 	2050 2800 2050 2500
 Connection ~ 2050 2500
@@ -370,7 +370,7 @@ Wire Wire Line
 Wire Wire Line
 	5750 2250 5850 2250
 Wire Wire Line
-	6150 2250 6150 2100
+	6150 2250 6150 2200
 Wire Wire Line
 	6150 2550 6150 2250
 Connection ~ 6150 2250
@@ -1334,4 +1334,44 @@ Connection ~ 6950 1500
 Wire Wire Line
 	2850 1750 3650 1750
 Connection ~ 2850 1750
+$Comp
+L Device:C_Small C?
+U 1 1 5DA03B3D
+P 2500 2450
+AR Path="/5CA6B0AA/5CC4DFC2/5DA03B3D" Ref="C?"  Part="1" 
+AR Path="/5CA6B0AA/5CC9409A/5DA03B3D" Ref="C?"  Part="1" 
+F 0 "C?" H 2510 2520 50  0000 L CNN
+F 1 "C_Small" H 2510 2370 50  0000 L CNN
+F 2 "" H 2500 2450 50  0001 C CNN
+F 3 "~" H 2500 2450 50  0001 C CNN
+	1    2500 2450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2600 2450 2850 2450
+Wire Wire Line
+	2400 2450 2050 2450
+Connection ~ 2050 2450
+Wire Wire Line
+	2050 2450 2050 2350
+$Comp
+L Device:C_Small C?
+U 1 1 5DA0FE44
+P 6600 2200
+AR Path="/5CA6B0AA/5CC4DFC2/5DA0FE44" Ref="C?"  Part="1" 
+AR Path="/5CA6B0AA/5CC9409A/5DA0FE44" Ref="C?"  Part="1" 
+F 0 "C?" H 6610 2270 50  0000 L CNN
+F 1 "C_Small" H 6610 2120 50  0000 L CNN
+F 2 "" H 6600 2200 50  0001 C CNN
+F 3 "~" H 6600 2200 50  0001 C CNN
+	1    6600 2200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6700 2200 6950 2200
+Wire Wire Line
+	6500 2200 6150 2200
+Connection ~ 6150 2200
+Wire Wire Line
+	6150 2200 6150 2100
 $EndSCHEMATC
