@@ -14,6 +14,10 @@ K Analog Switch SPST
 F  http://www.ti.com/lit/ds/symlink/ts5a3166.pdf
 $ENDCMP
 #
+$CMP C0810J5003AHF
+D Signal Conditioning 800-1000MHz IL=.6dB 3dB 90 Deg.
+$ENDCMP
+#
 $CMP HHM1515B2
 D Signal Conditioning BALUN RF 880-960MHz 200 ohms
 $ENDCMP
@@ -28,7 +32,7 @@ K balun, filtering
 $ENDCMP
 #
 $CMP PD0810J5050S2HF
-D Signal Conditioning 800-1000MHz 50 Ohm IL=.8dB Ultra Low Profile 0805 Power Divider 
+D Signal Conditioning 800-1000MHz 50 Ohm IL=.8dB Ultra Low Profile 0805 Power Divider
 K power splitter combiner
 $ENDCMP
 #

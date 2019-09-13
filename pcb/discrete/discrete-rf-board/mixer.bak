@@ -1311,4 +1311,6 @@ Wire Wire Line
 Wire Wire Line
 	2100 1900 2300 1900
 Connection ~ 2300 1900
+Text Notes 3650 1400 0    50   ~ 0
+TODO combine transistor pairs into matched transistor\nunits
 $EndSCHEMATC

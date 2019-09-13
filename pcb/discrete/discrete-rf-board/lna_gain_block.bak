@@ -92,7 +92,7 @@ F 3 "" H 6700 3800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4500 3500 4500 3650
+	4500 3500 4500 3600
 $Comp
 L Device:R_Small R?
 U 1 1 5D3CF659
@@ -151,13 +151,6 @@ F 3 "~" H 6300 3250 50  0001 C CNN
 	1    6300 3250
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	4500 3700 4600 3700
-Connection ~ 4500 3700
-Wire Wire Line
-	4500 3800 4500 3700
-Wire Wire Line
-	4400 3700 4500 3700
 $Comp
 L Device:C_Small C?
 U 1 1 5D3CF693
@@ -565,16 +558,13 @@ $EndComp
 Wire Wire Line
 	5000 3500 5000 3400
 Wire Wire Line
-	4500 3650 4850 3650
+	4500 3600 4850 3600
 Wire Wire Line
-	4850 3650 4850 3150
+	4850 3600 4850 3150
 Wire Wire Line
 	4850 3150 5000 3150
 Wire Wire Line
 	5000 3150 5000 3200
-Connection ~ 4500 3650
-Wire Wire Line
-	4500 3650 4500 3700
 $Comp
 L discrete-parts:Q_NPN_BCEE Q801
 U 1 1 5D191C23
@@ -599,7 +589,7 @@ Connection ~ 5550 4050
 Wire Wire Line
 	5550 4050 5550 4200
 Text Notes 4250 4750 0    50   ~ 0
-Vbe=~~0.827V, ib=~~0.05mA, ic=5mA\nNF=1.5 dB, K=~16dB
+Vbe=~~0.827V, ib=~~0.05mA, ic=5mA\nNF=1.5 dB, K=~~16dB
 Text Notes 6100 2650 0    50   ~ 0
 TODO make sure the matching circuit values are\ncalculated for Vce=5V
 $Comp
@@ -645,8 +635,21 @@ $EndComp
 Wire Wire Line
 	6100 4200 6100 4100
 Wire Wire Line
-	4800 3700 5250 3700
+	4800 3700 4850 3700
 Wire Wire Line
 	6200 3250 6100 3250
 Connection ~ 6100 3250
+Wire Wire Line
+	4400 3700 4500 3700
+Wire Wire Line
+	4500 3800 4500 3700
+Connection ~ 4500 3700
+Wire Wire Line
+	4500 3700 4600 3700
+Wire Wire Line
+	4850 3600 4850 3700
+Connection ~ 4850 3600
+Connection ~ 4850 3700
+Wire Wire Line
+	4850 3700 5250 3700
 $EndSCHEMATC

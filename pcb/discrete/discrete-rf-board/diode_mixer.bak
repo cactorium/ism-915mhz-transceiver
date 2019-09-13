@@ -401,13 +401,13 @@ F 3 "~" H 5000 3450 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	6250 3450 6500 3450
+	6250 3450 6350 3450
 Wire Wire Line
-	6500 3750 6250 3750
+	6500 3750 6400 3750
 Wire Wire Line
-	5200 3450 5550 3450
+	5200 3450 5500 3450
 Wire Wire Line
-	5200 3750 5550 3750
+	5200 3750 5450 3750
 $Comp
 L Device:C_Small C301
 U 1 1 5D51EF09
@@ -556,4 +556,62 @@ F 4 "810-HHM17147A1" H 8750 3250 50  0000 C CNN "Mouser"
 	1    8750 3600
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector:Conn_Coaxial J?
+U 1 1 5D264607
+P 5150 2650
+AR Path="/5CA6B0AA/5CC1CC09/5D264607" Ref="J?"  Part="1" 
+AR Path="/5CA6B0AA/5CC4015A/5D264607" Ref="J?"  Part="1" 
+F 0 "J?" H 5160 2770 50  0000 C CNN
+F 1 "Conn_Coaxial" V 5265 2650 50  0000 C CNN
+F 2 "" H 5150 2650 50  0001 C CNN
+F 3 " ~" H 5150 2650 50  0001 C CNN
+	1    5150 2650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J?
+U 1 1 5D264D0A
+P 6600 2850
+AR Path="/5CA6B0AA/5CC1CC09/5D264D0A" Ref="J?"  Part="1" 
+AR Path="/5CA6B0AA/5CC4015A/5D264D0A" Ref="J?"  Part="1" 
+F 0 "J?" H 6610 2970 50  0000 C CNN
+F 1 "Conn_Coaxial" V 6715 2850 50  0000 C CNN
+F 2 "" H 6600 2850 50  0001 C CNN
+F 3 " ~" H 6600 2850 50  0001 C CNN
+	1    6600 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 3050 6600 3850
+Wire Wire Line
+	6400 3850 6400 3750
+Wire Wire Line
+	6400 3850 6600 3850
+Connection ~ 6400 3750
+Wire Wire Line
+	6400 3750 6250 3750
+Wire Wire Line
+	6400 2850 6350 2850
+Wire Wire Line
+	6350 2850 6350 3450
+Connection ~ 6350 3450
+Wire Wire Line
+	6350 3450 6500 3450
+Wire Wire Line
+	5350 2650 5500 2650
+Wire Wire Line
+	5500 2650 5500 3450
+Connection ~ 5500 3450
+Wire Wire Line
+	5500 3450 5550 3450
+Wire Wire Line
+	5150 2850 5150 3100
+Wire Wire Line
+	5150 3100 5450 3100
+Wire Wire Line
+	5450 3100 5450 3750
+Connection ~ 5450 3750
+Wire Wire Line
+	5450 3750 5550 3750
 $EndSCHEMATC

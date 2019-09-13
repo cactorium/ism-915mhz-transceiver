@@ -116,4 +116,56 @@ F 3 "" H 4350 4100 50  0001 C CNN
 $EndComp
 Text Notes 9150 2800 0    50   ~ 0
 TODO add simple BPF here
+$Comp
+L Connector:Conn_Coaxial J?
+U 1 1 5D25DBD6
+P 3600 5550
+F 0 "J?" H 3610 5670 50  0000 C CNN
+F 1 "Conn_Coaxial" V 3715 5550 50  0000 C CNN
+F 2 "" H 3600 5550 50  0001 C CNN
+F 3 " ~" H 3600 5550 50  0001 C CNN
+	1    3600 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J?
+U 1 1 5D25E080
+P 2900 5550
+F 0 "J?" H 2910 5670 50  0000 C CNN
+F 1 "Conn_Coaxial" V 3015 5550 50  0000 C CNN
+F 2 "" H 2900 5550 50  0001 C CNN
+F 3 " ~" H 2900 5550 50  0001 C CNN
+	1    2900 5550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5D25FE18
+P 2900 5900
+F 0 "#PWR?" H 2900 5650 50  0001 C CNN
+F 1 "GND" H 2900 5750 50  0000 C CNN
+F 2 "" H 2900 5900 50  0001 C CNN
+F 3 "" H 2900 5900 50  0001 C CNN
+	1    2900 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5D260B4F
+P 3600 5900
+F 0 "#PWR?" H 3600 5650 50  0001 C CNN
+F 1 "GND" H 3600 5750 50  0000 C CNN
+F 2 "" H 3600 5900 50  0001 C CNN
+F 3 "" H 3600 5900 50  0001 C CNN
+	1    3600 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 5750 3600 5900
+Wire Wire Line
+	2900 5750 2900 5900
+Wire Wire Line
+	3100 5550 3400 5550
+Text Notes 2350 5300 0    50   ~ 0
+Calibration connector to deembed the BNC connectors\nfor tweaking the component values in the amplifier\nstages
 $EndSCHEMATC

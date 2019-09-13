@@ -241,6 +241,4 @@ Wire Wire Line
 	3650 2600 4150 2600
 Text Notes 6300 2000 0    50   ~ 0
 TODO wire up control pins
-Text Notes 6350 1750 0    50   ~ 0
-TODO design ADC stages
 $EndSCHEMATC
