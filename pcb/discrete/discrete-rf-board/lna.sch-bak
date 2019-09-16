@@ -4,7 +4,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 6 19
+Sheet 13 19
 Title ""
 Date ""
 Rev ""
@@ -17,7 +17,7 @@ $EndDescr
 $Sheet
 S 5500 3200 1050 850 
 U 5D3C8D48
-F0 "LNA Gain Block" 50
+F0 "LNA Gain Block 2" 50
 F1 "lna_gain_block.sch" 50
 F2 "IN" I L 5500 3650 50 
 F3 "OUT" I R 6550 3650 50 
@@ -26,7 +26,7 @@ $EndSheet
 $Sheet
 S 8450 3200 1050 850 
 U 5D4104E7
-F0 "sheet5D4104E2" 50
+F0 "LNA Gain Block 3" 50
 F1 "lna_gain_block.sch" 50
 F2 "IN" I L 8450 3650 50 
 F3 "OUT" I R 9500 3650 50 
@@ -35,7 +35,7 @@ $EndSheet
 $Sheet
 S 1400 3200 1050 850 
 U 5D4124AC
-F0 "sheet5D4124A7" 50
+F0 "LNA Gain Block 1" 50
 F1 "lna_gain_block.sch" 50
 F2 "IN" I L 1400 3650 50 
 F3 "OUT" I R 2450 3650 50 
@@ -44,7 +44,7 @@ $EndSheet
 $Sheet
 S 4050 3150 1150 950 
 U 5D4B0AA8
-F0 "Sheet5D4B0AA7" 50
+F0 "LNA Attenuator 1" 50
 F1 "switchable-attenuator.sch" 50
 F2 "OUT" I R 5200 3650 50 
 F3 "IN" I L 4050 3650 50 
@@ -56,7 +56,7 @@ Wire Wire Line
 $Sheet
 S 7000 3150 1150 950 
 U 5D4C7749
-F0 "sheet5D4C7743" 50
+F0 "LNA Attenuator 2" 50
 F1 "switchable-attenuator.sch" 50
 F2 "OUT" I R 8150 3650 50 
 F3 "IN" I L 7000 3650 50 
@@ -226,7 +226,7 @@ L Connector:Conn_Coaxial J701
 U 1 1 5D1BAD0A
 P 2850 4600
 F 0 "J701" H 2860 4720 50  0000 C CNN
-F 1 "Conn_Coaxial" V 2965 4600 50  0000 C CNN
+F 1 "UFL" V 2965 4600 50  0000 C CNN
 F 2 "" H 2850 4600 50  0001 C CNN
 F 3 " ~" H 2850 4600 50  0001 C CNN
 	1    2850 4600
@@ -237,7 +237,7 @@ L Connector:Conn_Coaxial J702
 U 1 1 5D1BB7C4
 P 5750 4500
 F 0 "J702" H 5760 4620 50  0000 C CNN
-F 1 "Conn_Coaxial" V 5865 4500 50  0000 C CNN
+F 1 "UFL" V 5865 4500 50  0000 C CNN
 F 2 "" H 5750 4500 50  0001 C CNN
 F 3 " ~" H 5750 4500 50  0001 C CNN
 	1    5750 4500
@@ -248,7 +248,7 @@ L Connector:Conn_Coaxial J704
 U 1 1 5D1BC003
 P 8800 4450
 F 0 "J704" H 8810 4570 50  0000 C CNN
-F 1 "Conn_Coaxial" V 8915 4450 50  0000 C CNN
+F 1 "UFL" V 8915 4450 50  0000 C CNN
 F 2 "" H 8800 4450 50  0001 C CNN
 F 3 " ~" H 8800 4450 50  0001 C CNN
 	1    8800 4450
@@ -259,7 +259,7 @@ L Connector:Conn_Coaxial J703
 U 1 1 5D1BCC67
 P 7150 2100
 F 0 "J703" H 7160 2220 50  0000 C CNN
-F 1 "Conn_Coaxial" V 7265 2100 50  0000 C CNN
+F 1 "UFL" V 7265 2100 50  0000 C CNN
 F 2 "" H 7150 2100 50  0001 C CNN
 F 3 " ~" H 7150 2100 50  0001 C CNN
 	1    7150 2100

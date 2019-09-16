@@ -4,7 +4,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 11 19
+Sheet 17 19
 Title ""
 Date ""
 Rev ""
@@ -30,8 +30,6 @@ F 4 "726-BGS12PL6E6327XTS" H 3400 2850 50  0000 C CNN "Mouser"
 	1    3950 3300
 	1    0    0    -1  
 $EndComp
-Text Notes 2500 3150 0    50   ~ 0
-TODO add SAW BPF here
 $Comp
 L Device:R_Small R?
 U 1 1 5D4B1FCA

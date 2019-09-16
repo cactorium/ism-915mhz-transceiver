@@ -71,6 +71,7 @@ F 0 "FL201" H 2500 3900 50  0000 C CNN
 F 1 "SF2098H" H 3000 3900 50  0000 C CNN
 F 2 "" H 2750 3150 50  0001 C CNN
 F 3 "" H 2750 4000 50  0001 C CNN
+F 4 "719-SF2098H " H 2750 3600 50  0001 C CNN "Mouser"
 	1    2750 3600
 	1    0    0    -1  
 $EndComp
@@ -124,6 +125,7 @@ F 0 "FL?" H 3600 3900 50  0000 C CNN
 F 1 "PD0810J5050S2HF" H 4100 3900 50  0000 C CNN
 F 2 "" H 3750 3150 50  0001 C CNN
 F 3 "" H 4150 3050 50  0001 C CNN
+F 4 " 620-PD0810J5050S2HF" H 3850 3600 50  0001 C CNN "Mouser"
 	1    3850 3600
 	1    0    0    -1  
 $EndComp
@@ -498,11 +500,11 @@ Wire Wire Line
 Text Label 8500 3600 0    50   ~ 0
 I_P
 Text Label 8500 3500 0    50   ~ 0
-I_M
+I_N
 Text Label 8500 3800 0    50   ~ 0
 Q_P
-Text Label 8650 3900 0    50   ~ 0
-Q_M
+Text Label 8500 3900 0    50   ~ 0
+Q_N
 Text HLabel 8800 4100 0    50   Input ~ 0
 ADC_ANB
 Text HLabel 8800 4200 0    50   Input ~ 0
@@ -728,8 +730,6 @@ Text Label 10450 3500 1    50   ~ 0
 ADC_VDD
 Text Label 10450 4000 1    50   ~ 0
 ADC_DVDD
-Text Notes 8850 1500 0    50   ~ 0
-TODO add clamping ESD diodes to I_M, I_P, etc\nTODO add bypass caps to DAC_VDD and DAC_DVDD
 Text HLabel 6050 2550 0    50   Input ~ 0
 I_AMP_5V
 Wire Wire Line
@@ -747,4 +747,347 @@ Wire Wire Line
 Wire Wire Line
 	6050 3050 6300 3050
 NoConn ~ 8900 4700
+Text Label 8550 4800 0    50   ~ 0
+REF_N
+Text Label 8550 4900 0    50   ~ 0
+REF_P
+Text Notes 8150 2100 0    50   ~ 0
+TODO figure out resistor and capacitor values
+Text Label 9150 2400 0    50   ~ 0
+ADC_VDD
+Text Label 10150 2400 0    50   ~ 0
+ADC_DVDD
+$Comp
+L Device:C_Small C?
+U 1 1 5DCB370F
+P 10600 2650
+F 0 "C?" H 10610 2720 50  0000 L CNN
+F 1 "2.2 uF" H 10610 2570 50  0000 L CNN
+F 2 "" H 10600 2650 50  0001 C CNN
+F 3 "~" H 10600 2650 50  0001 C CNN
+	1    10600 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5DCB39F9
+P 10150 2650
+F 0 "C?" H 10160 2720 50  0000 L CNN
+F 1 "0.1 uF" H 10160 2570 50  0000 L CNN
+F 2 "" H 10150 2650 50  0001 C CNN
+F 3 "~" H 10150 2650 50  0001 C CNN
+	1    10150 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DCB4392
+P 10600 2850
+F 0 "#PWR?" H 10600 2600 50  0001 C CNN
+F 1 "GND" H 10600 2700 50  0000 C CNN
+F 2 "" H 10600 2850 50  0001 C CNN
+F 3 "" H 10600 2850 50  0001 C CNN
+	1    10600 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10150 2400 10150 2500
+Wire Wire Line
+	10150 2500 10600 2500
+Wire Wire Line
+	10600 2500 10600 2550
+Connection ~ 10150 2500
+Wire Wire Line
+	10150 2500 10150 2550
+Wire Wire Line
+	10600 2750 10600 2850
+Wire Wire Line
+	10150 2850 10150 2750
+$Comp
+L power:GND #PWR?
+U 1 1 5DCC75D7
+P 10150 2850
+F 0 "#PWR?" H 10150 2600 50  0001 C CNN
+F 1 "GND" H 10150 2700 50  0000 C CNN
+F 2 "" H 10150 2850 50  0001 C CNN
+F 3 "" H 10150 2850 50  0001 C CNN
+	1    10150 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5DCC9D99
+P 9600 2650
+F 0 "C?" H 9610 2720 50  0000 L CNN
+F 1 "2.2 uF" H 9610 2570 50  0000 L CNN
+F 2 "" H 9600 2650 50  0001 C CNN
+F 3 "~" H 9600 2650 50  0001 C CNN
+	1    9600 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5DCC9D9F
+P 9150 2650
+F 0 "C?" H 9160 2720 50  0000 L CNN
+F 1 "0.1 uF" H 9160 2570 50  0000 L CNN
+F 2 "" H 9150 2650 50  0001 C CNN
+F 3 "~" H 9150 2650 50  0001 C CNN
+	1    9150 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DCC9DA5
+P 9600 2850
+F 0 "#PWR?" H 9600 2600 50  0001 C CNN
+F 1 "GND" H 9600 2700 50  0000 C CNN
+F 2 "" H 9600 2850 50  0001 C CNN
+F 3 "" H 9600 2850 50  0001 C CNN
+	1    9600 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 2400 9150 2500
+Wire Wire Line
+	9150 2500 9600 2500
+Wire Wire Line
+	9600 2500 9600 2550
+Connection ~ 9150 2500
+Wire Wire Line
+	9150 2500 9150 2550
+Wire Wire Line
+	9600 2750 9600 2850
+Wire Wire Line
+	9150 2850 9150 2750
+$Comp
+L power:GND #PWR?
+U 1 1 5DCC9DB2
+P 9150 2850
+F 0 "#PWR?" H 9150 2600 50  0001 C CNN
+F 1 "GND" H 9150 2700 50  0000 C CNN
+F 2 "" H 9150 2850 50  0001 C CNN
+F 3 "" H 9150 2850 50  0001 C CNN
+	1    9150 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:BAV99 D?
+U 1 1 5DD008E8
+P 3650 6200
+F 0 "D?" H 3650 6300 50  0000 C CNN
+F 1 "BAV99" H 3650 6100 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 3650 6050 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/BAV99_SER.pdf" H 3650 6300 50  0001 C CNN
+	1    3650 6200
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:BAV99 D?
+U 2 1 5DD008EE
+P 3650 5700
+F 0 "D?" H 3650 5800 50  0000 C CNN
+F 1 "BAV99" H 3650 5600 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 3650 5550 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/BAV99_SER.pdf" H 3650 5800 50  0001 C CNN
+	2    3650 5700
+	0    1    1    0   
+$EndComp
+Text Label 4000 6450 2    50   ~ 0
+I_N
+Wire Wire Line
+	3650 5850 3650 6050
+Wire Wire Line
+	3650 5450 3650 5550
+Wire Wire Line
+	3650 6450 3650 6350
+$Comp
+L Diode:BAV99 D?
+U 1 1 5DD254C5
+P 4000 5700
+F 0 "D?" H 4000 5800 50  0000 C CNN
+F 1 "BAV99" H 4000 5600 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4000 5550 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/BAV99_SER.pdf" H 4000 5800 50  0001 C CNN
+	1    4000 5700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Diode:BAV99 D?
+U 2 1 5DD254CB
+P 4000 6200
+F 0 "D?" H 4000 6300 50  0000 C CNN
+F 1 "BAV99" H 4000 6100 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4000 6050 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/BAV99_SER.pdf" H 4000 6300 50  0001 C CNN
+	2    4000 6200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4000 6050 4000 5850
+Wire Wire Line
+	4000 6450 4000 6350
+Wire Wire Line
+	4000 5450 4000 5550
+$Comp
+L Diode:BAV99 D?
+U 1 1 5DD2A865
+P 4350 6200
+F 0 "D?" H 4350 6300 50  0000 C CNN
+F 1 "BAV99" H 4350 6100 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4350 6050 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/BAV99_SER.pdf" H 4350 6300 50  0001 C CNN
+	1    4350 6200
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:BAV99 D?
+U 2 1 5DD2A86B
+P 4350 5700
+F 0 "D?" H 4350 5800 50  0000 C CNN
+F 1 "BAV99" H 4350 5600 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4350 5550 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/BAV99_SER.pdf" H 4350 5800 50  0001 C CNN
+	2    4350 5700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4350 5850 4350 6050
+Wire Wire Line
+	4350 5450 4350 5550
+Wire Wire Line
+	4350 6450 4350 6350
+Wire Wire Line
+	4700 5450 4700 5550
+Text Label 4000 5450 2    50   ~ 0
+I_P
+Text Label 4700 5450 2    50   ~ 0
+Q_P
+Wire Wire Line
+	3650 6450 4000 6450
+Wire Wire Line
+	4350 6450 4700 6450
+Wire Wire Line
+	3650 5450 4000 5450
+Wire Wire Line
+	4350 5450 4700 5450
+Text Label 4700 6450 2    50   ~ 0
+Q_N
+Wire Wire Line
+	4700 6450 4700 6350
+Wire Wire Line
+	4700 6050 4700 5850
+$Comp
+L Diode:BAV99 D?
+U 2 1 5DD36B9C
+P 4700 6200
+F 0 "D?" H 4700 6300 50  0000 C CNN
+F 1 "BAV99" H 4700 6100 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4700 6050 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/BAV99_SER.pdf" H 4700 6300 50  0001 C CNN
+	2    4700 6200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Diode:BAV99 D?
+U 1 1 5DD36B96
+P 4700 5700
+F 0 "D?" H 4700 5800 50  0000 C CNN
+F 1 "BAV99" H 4700 5600 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4700 5550 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/BAV99_SER.pdf" H 4700 5800 50  0001 C CNN
+	1    4700 5700
+	0    -1   -1   0   
+$EndComp
+Text HLabel 950  3900 0    50   Input ~ 0
+LNA_BYP1
+Text HLabel 950  4000 0    50   Input ~ 0
+LNA_BYP2
+Wire Wire Line
+	950  4000 1000 4000
+Wire Wire Line
+	1000 3900 950  3900
+Text HLabel 950  3250 0    50   Input ~ 0
+LNA_5V0
+Wire Wire Line
+	950  3250 1000 3250
+Text Notes 3650 6600 0    50   ~ 0
+~~1.4 pF due to diode parasitics
+Text HLabel 10650 5150 2    50   Input ~ 0
+ADC_GND1
+Text HLabel 6050 5050 0    50   Input ~ 0
+Q_AMP_GND
+Text HLabel 6050 2200 0    50   Input ~ 0
+I_AMP_GND
+$Comp
+L power:GND #PWR?
+U 1 1 5D899C0D
+P 6150 2200
+F 0 "#PWR?" H 6150 1950 50  0001 C CNN
+F 1 "GND" H 6150 2050 50  0000 C CNN
+F 2 "" H 6150 2200 50  0001 C CNN
+F 3 "" H 6150 2200 50  0001 C CNN
+	1    6150 2200
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	6150 2200 6050 2200
+Text HLabel 900  4350 0    50   Input ~ 0
+LNA_GND
+$Comp
+L power:GND #PWR?
+U 1 1 5D8B7DE1
+P 1050 4450
+F 0 "#PWR?" H 1050 4200 50  0001 C CNN
+F 1 "GND" H 1050 4300 50  0000 C CNN
+F 2 "" H 1050 4450 50  0001 C CNN
+F 3 "" H 1050 4450 50  0001 C CNN
+	1    1050 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1050 4450 1050 4350
+Wire Wire Line
+	1050 4350 900  4350
+$Comp
+L power:GND #PWR?
+U 1 1 5D8C1256
+P 6250 5050
+F 0 "#PWR?" H 6250 4800 50  0001 C CNN
+F 1 "GND" H 6250 4900 50  0000 C CNN
+F 2 "" H 6250 5050 50  0001 C CNN
+F 3 "" H 6250 5050 50  0001 C CNN
+	1    6250 5050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6050 5050 6250 5050
+$Comp
+L power:GND #PWR?
+U 1 1 5D8D156B
+P 10450 5150
+F 0 "#PWR?" H 10450 4900 50  0001 C CNN
+F 1 "GND" H 10450 5000 50  0000 C CNN
+F 2 "" H 10450 5150 50  0001 C CNN
+F 3 "" H 10450 5150 50  0001 C CNN
+	1    10450 5150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10450 5150 10650 5150
+Text HLabel 10650 5350 2    50   Input ~ 0
+ADC_GND2
+$Comp
+L power:GND #PWR?
+U 1 1 5D8DE44C
+P 10450 5350
+F 0 "#PWR?" H 10450 5100 50  0001 C CNN
+F 1 "GND" H 10450 5200 50  0000 C CNN
+F 2 "" H 10450 5350 50  0001 C CNN
+F 3 "" H 10450 5350 50  0001 C CNN
+	1    10450 5350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10450 5350 10650 5350
 $EndSCHEMATC
