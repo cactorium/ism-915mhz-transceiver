@@ -1382,4 +1382,6 @@ Text Notes 1300 3600 0    50   ~ 0
 1.4 V max
 Text Notes 2500 3950 0    50   ~ 0
 0.7 V max\n30 mA max
+Text Notes 3200 1100 0    50   ~ 0
+TODO figure out shunt cap values
 $EndSCHEMATC

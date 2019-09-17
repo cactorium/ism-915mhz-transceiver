@@ -344,8 +344,6 @@ Text Label 3750 3550 3    50   ~ 0
 LO_SW_CTRL_3V3
 Wire Wire Line
 	3750 3550 3850 3550
-Text Label 9000 3450 3    50   ~ 0
-RF_SW_CTRL
 Wire Wire Line
 	9000 3450 8800 3450
 Text Label 2550 1900 0    50   ~ 0
@@ -896,21 +894,21 @@ Wire Wire Line
 	7100 2250 7250 2250
 Wire Wire Line
 	7250 2350 7100 2350
-Text Label 1500 5700 0    50   ~ 0
+Text Label 1250 5650 0    50   ~ 0
 PLL_5V0
-Text Label 1500 5800 0    50   ~ 0
+Text Label 1250 5750 0    50   ~ 0
 PLL_3V3
-Text Label 1500 5900 0    50   ~ 0
+Text Label 1250 5850 0    50   ~ 0
 PLL_DATA
-Text Label 1500 6000 0    50   ~ 0
+Text Label 1250 5950 0    50   ~ 0
 PLL_CLK
-Text Label 1500 6100 0    50   ~ 0
+Text Label 1250 6050 0    50   ~ 0
 PLL_CE
-Text Label 1500 6200 0    50   ~ 0
+Text Label 1250 6150 0    50   ~ 0
 PLL_LE
-Text Label 1500 6300 0    50   ~ 0
+Text Label 1250 6250 0    50   ~ 0
 PLL_MUXOUT
-Text Label 1500 6400 0    50   ~ 0
+Text Label 1250 6350 0    50   ~ 0
 PLL_GND
 Text Label 2450 5100 0    50   ~ 0
 TX_I_DAC_GND
@@ -1018,33 +1016,22 @@ Text Label 3750 6050 0    50   ~ 0
 RX_LNA_BYP1
 Text Label 3750 6150 0    50   ~ 0
 RX_LNA_BYP2
-$Comp
-L Connector_Generic:Conn_01x08 J?
-U 1 1 5DA33260
-P 1200 6000
-F 0 "J?" H 1200 6400 50  0000 C CNN
-F 1 "Conn_01x08" H 1200 5500 50  0000 C CNN
-F 2 "" H 1200 6000 50  0001 C CNN
-F 3 "~" H 1200 6000 50  0001 C CNN
-	1    1200 6000
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
-	1400 5700 1500 5700
+	1150 5650 1250 5650
 Wire Wire Line
-	1500 5800 1400 5800
+	1250 5750 1150 5750
 Wire Wire Line
-	1400 5900 1500 5900
+	1150 5850 1250 5850
 Wire Wire Line
-	1500 6000 1400 6000
+	1250 5950 1150 5950
 Wire Wire Line
-	1400 6100 1500 6100
+	1150 6050 1250 6050
 Wire Wire Line
-	1500 6200 1400 6200
+	1250 6150 1150 6150
 Wire Wire Line
-	1400 6300 1500 6300
+	1150 6250 1250 6250
 Wire Wire Line
-	1400 6400 1500 6400
+	1150 6350 1250 6350
 Wire Wire Line
 	2450 5100 2300 5100
 Wire Wire Line
@@ -1091,17 +1078,6 @@ Wire Wire Line
 	2450 7300 2300 7300
 Wire Wire Line
 	2300 6300 2450 6300
-$Comp
-L Connector_Generic:Conn_01x23 J?
-U 1 1 5DAC4901
-P 2100 6200
-F 0 "J?" H 2100 7400 50  0000 C CNN
-F 1 "Conn_01x23" H 2100 5000 50  0000 C CNN
-F 2 "" H 2100 6200 50  0001 C CNN
-F 3 "~" H 2100 6200 50  0001 C CNN
-	1    2100 6200
-	-1   0    0    -1  
-$EndComp
 $Comp
 L Connector_Generic:Conn_01x30 J?
 U 1 1 5DAC6938
@@ -1173,4 +1149,82 @@ Wire Wire Line
 	3600 7650 3750 7650
 Wire Wire Line
 	3600 7450 3750 7450
+Text Label 2450 5000 0    50   ~ 0
+RF_SW_VDD_5V
+Text Label 1250 5550 0    50   ~ 0
+LO_SW_VDD_5V
+Wire Wire Line
+	1150 5550 1250 5550
+Text Label 8300 1850 0    50   ~ 0
+RF_SW_GND
+$Comp
+L power:GND #PWR?
+U 1 1 5DB60E45
+P 8200 1850
+F 0 "#PWR?" H 8200 1600 50  0001 C CNN
+F 1 "GND" H 8200 1700 50  0000 C CNN
+F 2 "" H 8200 1850 50  0001 C CNN
+F 3 "" H 8200 1850 50  0001 C CNN
+	1    8200 1850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8200 1850 8300 1850
+Text Label 2450 4900 0    50   ~ 0
+RF_SW_GND
+Wire Wire Line
+	2300 5000 2450 5000
+Wire Wire Line
+	2450 4900 2300 4900
+Text Label 2550 1650 0    50   ~ 0
+LO_SW_GND
+$Comp
+L power:GND #PWR?
+U 1 1 5DB9787B
+P 2450 1650
+F 0 "#PWR?" H 2450 1400 50  0001 C CNN
+F 1 "GND" H 2450 1500 50  0000 C CNN
+F 2 "" H 2450 1650 50  0001 C CNN
+F 3 "" H 2450 1650 50  0001 C CNN
+	1    2450 1650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2450 1650 2550 1650
+Text Label 1250 5450 0    50   ~ 0
+LO_SW_GND
+Wire Wire Line
+	1150 5450 1250 5450
+Text Label 1250 5350 0    50   ~ 0
+LO_SW_CTRL_3V3
+Text Label 9000 3450 3    50   ~ 0
+RF_SW_CTRL
+Text Label 2450 4800 0    50   ~ 0
+RF_SW_CTRL
+$Comp
+L Connector_Generic:Conn_01x11 J?
+U 1 1 5DBBF0DF
+P 950 5850
+F 0 "J?" H 950 6450 50  0000 C CNN
+F 1 "Conn_01x11" H 950 5250 50  0000 C CNN
+F 2 "" H 950 5850 50  0001 C CNN
+F 3 "~" H 950 5850 50  0001 C CNN
+	1    950  5850
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x26 J?
+U 1 1 5DBC1FAA
+P 2100 6000
+F 0 "J?" H 2100 7300 50  0000 C CNN
+F 1 "Conn_01x26" H 2100 4600 50  0000 C CNN
+F 2 "" H 2100 6000 50  0001 C CNN
+F 3 "~" H 2100 6000 50  0001 C CNN
+	1    2100 6000
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 4800 2450 4800
+Wire Wire Line
+	1150 5350 1250 5350
 $EndSCHEMATC
