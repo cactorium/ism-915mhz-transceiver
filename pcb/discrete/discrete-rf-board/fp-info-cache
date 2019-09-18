@@ -1,4 +1,18 @@
-4706169556058
+17256359994058
+discrete_footprints
+142-0701-801-with-taper
+
+
+0
+12
+2
+discrete_footprints
+2337019-1
+
+
+0
+3
+2
 discrete_footprints
 Analog_CP-24-14
 
@@ -7,6 +21,27 @@ Analog_CP-24-14
 25
 25
 discrete_footprints
+Analog_DFN8-EP
+
+
+0
+8
+8
+discrete_footprints
+Anaren_C0810J5003AHF
+
+
+0
+6
+6
+discrete_footprints
+Anaren_PD0810J5050S2HF
+
+
+0
+6
+6
+discrete_footprints
 Infineon_SOT143
 
 
@@ -14,9 +49,30 @@ Infineon_SOT143
 4
 3
 discrete_footprints
+Infineon_TSLP-6-4
+
+
+0
+6
+6
+discrete_footprints
 Murata_SM2016-4
 
 
 0
 4
 4
+discrete_footprints
+TDK_HHM1515B2
+
+
+0
+6
+6
+discrete_footprints
+TDK_HHM17147A1
+
+
+0
+6
+6
