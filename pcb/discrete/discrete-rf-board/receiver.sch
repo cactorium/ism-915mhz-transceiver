@@ -872,23 +872,23 @@ $EndComp
 $Comp
 L Diode:BAV99 D1
 U 2 1 5DD008E8
-P 3650 6200
-F 0 "D1" H 3650 6300 50  0000 C CNN
-F 1 "BAV99" H 3650 6100 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 3650 6050 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/BAV99_SER.pdf" H 3650 6300 50  0001 C CNN
-	2    3650 6200
-	0    1    1    0   
-$EndComp
-$Comp
-L Diode:BAV99 D1
-U 1 1 5DD008EE
 P 3650 5700
 F 0 "D1" H 3650 5800 50  0000 C CNN
 F 1 "BAV99" H 3650 5600 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 3650 5550 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/BAV99_SER.pdf" H 3650 5800 50  0001 C CNN
-	1    3650 5700
+	2    3650 5700
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:BAV99 D1
+U 1 1 5DD008EE
+P 3650 6200
+F 0 "D1" H 3650 6300 50  0000 C CNN
+F 1 "BAV99" H 3650 6100 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 3650 6050 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/BAV99_SER.pdf" H 3650 6300 50  0001 C CNN
+	1    3650 6200
 	0    1    1    0   
 $EndComp
 Text Label 4000 6450 2    50   ~ 0
@@ -930,23 +930,23 @@ Wire Wire Line
 $Comp
 L Diode:BAV99 D3
 U 2 1 5DD2A865
-P 4350 6200
-F 0 "D3" H 4350 6300 50  0000 C CNN
-F 1 "BAV99" H 4350 6100 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 4350 6050 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/BAV99_SER.pdf" H 4350 6300 50  0001 C CNN
-	2    4350 6200
-	0    1    1    0   
-$EndComp
-$Comp
-L Diode:BAV99 D3
-U 1 1 5DD2A86B
 P 4350 5700
 F 0 "D3" H 4350 5800 50  0000 C CNN
 F 1 "BAV99" H 4350 5600 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 4350 5550 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/BAV99_SER.pdf" H 4350 5800 50  0001 C CNN
-	1    4350 5700
+	2    4350 5700
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:BAV99 D3
+U 1 1 5DD2A86B
+P 4350 6200
+F 0 "D3" H 4350 6300 50  0000 C CNN
+F 1 "BAV99" H 4350 6100 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4350 6050 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/BAV99_SER.pdf" H 4350 6300 50  0001 C CNN
+	1    4350 6200
 	0    1    1    0   
 $EndComp
 Wire Wire Line
