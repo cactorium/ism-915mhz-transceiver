@@ -4,7 +4,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 10 19
+Sheet 12 19
 Title ""
 Date ""
 Rev ""
@@ -14,19 +14,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L Device:R_Small R95
-U 1 1 5CC4F475
-P 2050 2250
-AR Path="/5CA6B0AA/5CC4DFC2/5CC4F475" Ref="R95"  Part="1" 
-AR Path="/5CA6B0AA/5CC9409A/5CC4F475" Ref="R119"  Part="1" 
-F 0 "R119" H 2080 2270 50  0000 L CNN
-F 1 "25R" H 2080 2210 50  0000 L CNN
-F 2 "" H 2050 2250 50  0001 C CNN
-F 3 "~" H 2050 2250 50  0001 C CNN
-	1    2050 2250
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:R_Small R97
 U 1 1 5CC4F99A
@@ -1342,7 +1329,7 @@ P 2500 2450
 AR Path="/5CA6B0AA/5CC4DFC2/5DA03B3D" Ref="C119"  Part="1" 
 AR Path="/5CA6B0AA/5CC9409A/5DA03B3D" Ref="C143"  Part="1" 
 F 0 "C143" H 2510 2520 50  0000 L CNN
-F 1 "C_Small" H 2510 2370 50  0000 L CNN
+F 1 "2.5 nF" H 2510 2370 50  0000 L CNN
 F 2 "" H 2500 2450 50  0001 C CNN
 F 3 "~" H 2500 2450 50  0001 C CNN
 	1    2500 2450
@@ -1362,7 +1349,7 @@ P 6600 2200
 AR Path="/5CA6B0AA/5CC4DFC2/5DA0FE44" Ref="C128"  Part="1" 
 AR Path="/5CA6B0AA/5CC9409A/5DA0FE44" Ref="C152"  Part="1" 
 F 0 "C152" H 6610 2270 50  0000 L CNN
-F 1 "C_Small" H 6610 2120 50  0000 L CNN
+F 1 "470 pF" H 6610 2120 50  0000 L CNN
 F 2 "" H 6600 2200 50  0001 C CNN
 F 3 "~" H 6600 2200 50  0001 C CNN
 	1    6600 2200
@@ -1383,6 +1370,19 @@ Text Notes 1300 3600 0    50   ~ 0
 1.4 V max
 Text Notes 2500 3950 0    50   ~ 0
 0.7 V max\n30 mA max
-Text Notes 3200 1100 0    50   ~ 0
-TODO figure out shunt cap values
+$Comp
+L Device:R_Small R95
+U 1 1 5CC4F475
+P 2050 2250
+AR Path="/5CA6B0AA/5CC4DFC2/5CC4F475" Ref="R95"  Part="1" 
+AR Path="/5CA6B0AA/5CC9409A/5CC4F475" Ref="R119"  Part="1" 
+F 0 "R119" H 2080 2270 50  0000 L CNN
+F 1 "25R" H 2080 2210 50  0000 L CNN
+F 2 "" H 2050 2250 50  0001 C CNN
+F 3 "~" H 2050 2250 50  0001 C CNN
+	1    2050 2250
+	1    0    0    -1  
+$EndComp
+Text Notes 1500 1050 0    50   ~ 0
+NOTE maybe swap out resistors to match design on left; maybe too much gain?
 $EndSCHEMATC

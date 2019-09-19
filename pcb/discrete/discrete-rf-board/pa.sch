@@ -598,8 +598,6 @@ Wire Wire Line
 	5650 4600 5650 4750
 Text Notes 4350 5300 0    50   ~ 0
 Vbe=~~0.827V, ib=~~0.05mA, ic=5mA\nNF=1.5 dB, K=~~16dB
-Text Notes 6200 3200 0    50   ~ 0
-TODO make sure the matching circuit values are\ncalculated for Vce=5V
 $Comp
 L Device:C_Small C?
 U 1 1 5D91A996

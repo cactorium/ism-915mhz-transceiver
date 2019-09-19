@@ -623,23 +623,19 @@ LO
 $Comp
 L power:GND #PWR0127
 U 1 1 5CB0CCE1
-P 9450 4500
-F 0 "#PWR0127" H 9450 4250 50  0001 C CNN
-F 1 "GND" H 9450 4350 50  0000 C CNN
-F 2 "" H 9450 4500 50  0001 C CNN
-F 3 "" H 9450 4500 50  0001 C CNN
-	1    9450 4500
+P 9450 5000
+F 0 "#PWR0127" H 9450 4750 50  0001 C CNN
+F 1 "GND" H 9450 4850 50  0000 C CNN
+F 2 "" H 9450 5000 50  0001 C CNN
+F 3 "" H 9450 5000 50  0001 C CNN
+	1    9450 5000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9450 4400 9450 4450
+	9550 4950 9450 4950
+Connection ~ 9450 4950
 Wire Wire Line
-	9550 4400 9550 4450
-Wire Wire Line
-	9550 4450 9450 4450
-Connection ~ 9450 4450
-Wire Wire Line
-	9450 4450 9450 4500
+	9450 4950 9450 5000
 $Comp
 L Connector:Conn_Coaxial J14
 U 1 1 5CB11865
@@ -963,13 +959,13 @@ Wire Wire Line
 Connection ~ 9450 3200
 Wire Wire Line
 	9450 3200 9450 3250
-Text Notes 9050 4850 0    50   ~ 0
+Text Notes 9050 5350 0    50   ~ 0
 ~~20 dB gain according to SPICE model,\n~~17 dB gain to S parameter model in scikit-rf
 Text Label 9450 2750 0    50   ~ 0
 5V
 Text Notes 9600 2550 0    50   ~ 0
 20 mA bias current
-Text Notes 8550 5150 0    50   ~ 0
+Text Notes 8550 5650 0    50   ~ 0
 Compression point should at ~~-10dBm (~~+10 dBm at output)
 Text HLabel 9450 2650 1    50   Input ~ 0
 5V0
@@ -1387,6 +1383,44 @@ F 1 "BFU520R" H 9600 4100 50  0000 L CNN
 F 2 "" H 9400 4200 50  0001 C CNN
 F 3 "" H 9400 4200 50  0001 C CNN
 	1    9400 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9450 4500 9550 4500
+Wire Wire Line
+	9550 4500 9550 4400
+$Comp
+L Device:R_Small R161
+U 1 1 5DAD826A
+P 9450 4700
+F 0 "R161" H 9480 4720 50  0000 L CNN
+F 1 "10R" H 9480 4660 50  0000 L CNN
+F 2 "" H 9450 4700 50  0001 C CNN
+F 3 "~" H 9450 4700 50  0001 C CNN
+	1    9450 4700
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9550 4800 9550 4950
+Wire Wire Line
+	9450 4800 9450 4950
+Wire Wire Line
+	9450 4400 9450 4500
+Connection ~ 9450 4500
+Wire Wire Line
+	9450 4500 9450 4600
+Wire Wire Line
+	9550 4500 9550 4600
+Connection ~ 9550 4500
+$Comp
+L Device:C_Small C211
+U 1 1 5DAD73DC
+P 9550 4700
+F 0 "C211" H 9560 4770 50  0000 L CNN
+F 1 "100 pF" H 9560 4620 50  0000 L CNN
+F 2 "" H 9550 4700 50  0001 C CNN
+F 3 "~" H 9550 4700 50  0001 C CNN
+	1    9550 4700
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

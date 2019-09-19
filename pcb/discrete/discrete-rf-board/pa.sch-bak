@@ -598,8 +598,6 @@ Wire Wire Line
 	5650 4600 5650 4750
 Text Notes 4350 5300 0    50   ~ 0
 Vbe=~~0.827V, ib=~~0.05mA, ic=5mA\nNF=1.5 dB, K=~~16dB
-Text Notes 6200 3200 0    50   ~ 0
-TODO make sure the matching circuit values are\ncalculated for Vce=5V
 $Comp
 L Device:C_Small C?
 U 1 1 5D91A996
@@ -883,8 +881,9 @@ U 1 1 5DA49B97
 P 5600 4250
 F 0 "Q10" H 5900 4250 50  0000 C CNN
 F 1 "BFU520R" H 5800 4150 50  0000 L CNN
-F 2 "" H 5600 4250 50  0001 C CNN
+F 2 "discrete_footprints:NXP_SOT143B" H 5600 4250 50  0001 C CNN
 F 3 "" H 5600 4250 50  0001 C CNN
+F 4 " 771-BFU520R " H 5600 4250 50  0001 C CNN "Mouser"
 	1    5600 4250
 	1    0    0    -1  
 $EndComp
