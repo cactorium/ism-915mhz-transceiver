@@ -36,7 +36,7 @@ F 2 "discrete_footprints:NXP_SOT143B" H 8050 4200 50  0001 C CNN
 F 3 "" H 8050 4200 50  0001 C CNN
 F 4 "726-BAT15099RE6327" H 8050 3500 50  0000 C CNN "Mouser"
 	1    8050 3900
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L discrete-parts:HHM17147A1 T2
@@ -53,14 +53,14 @@ $EndComp
 $Comp
 L Connector:Conn_Coaxial J3
 U 1 1 5DAA7992
-P 10300 3750
-F 0 "J3" H 10310 3870 50  0000 C CNN
-F 1 "SMA" V 10415 3750 50  0000 C CNN
-F 2 "discrete_footprints:142-0701-801-with-taper" H 10300 3750 50  0001 C CNN
-F 3 " ~" H 10300 3750 50  0001 C CNN
-F 4 " 530-142-0701-801 " H 10300 3750 50  0001 C CNN "Mouser"
-	1    10300 3750
-	1    0    0    -1  
+P 10300 4050
+F 0 "J3" H 10310 4170 50  0000 C CNN
+F 1 "SMA" V 10415 4050 50  0000 C CNN
+F 2 "discrete_footprints:142-0701-801-with-taper" H 10300 4050 50  0001 C CNN
+F 3 " ~" H 10300 4050 50  0001 C CNN
+F 4 " 530-142-0701-801 " H 10300 4050 50  0001 C CNN "Mouser"
+	1    10300 4050
+	1    0    0    1   
 $EndComp
 $Comp
 L Device:L_Small L6
@@ -216,24 +216,22 @@ F 2 "Capacitor_SMD:C_0402_1005Metric" H 6250 4300 50  0001 C CNN
 F 3 "~" H 6250 4300 50  0001 C CNN
 F 4 "815-AIML-0402-1R0KT" H 6250 4300 50  0001 C CNN "Mouser"
 	1    6250 4300
-	-1   0    0    -1  
+	1    0    0    -1  
 $EndComp
 $Comp
 L Device:L_Small L15
 U 1 1 5DAB475E
-P 6750 4300
-F 0 "L15" H 6780 4340 50  0000 L CNN
-F 1 "1 uH" H 6780 4260 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 6750 4300 50  0001 C CNN
-F 3 "~" H 6750 4300 50  0001 C CNN
-F 4 "815-AIML-0402-1R0KT" H 6750 4300 50  0001 C CNN "Mouser"
-	1    6750 4300
+P 6050 4300
+F 0 "L15" H 6080 4340 50  0000 L CNN
+F 1 "1 uH" H 6080 4260 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 6050 4300 50  0001 C CNN
+F 3 "~" H 6050 4300 50  0001 C CNN
+F 4 "815-AIML-0402-1R0KT" H 6050 4300 50  0001 C CNN "Mouser"
+	1    6050 4300
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6750 4200 6750 4050
-Wire Wire Line
-	6750 4050 7000 4050
+	6050 4200 6050 4050
 Wire Wire Line
 	6250 4200 6250 3750
 Wire Wire Line
@@ -245,9 +243,6 @@ Wire Wire Line
 Connection ~ 6900 3750
 Wire Wire Line
 	6650 3950 6650 4050
-Wire Wire Line
-	6650 4050 6750 4050
-Connection ~ 6750 4050
 $Comp
 L Device:C_Small C14
 U 1 1 5DAB5B64
@@ -280,9 +275,7 @@ Wire Wire Line
 Wire Wire Line
 	6250 4400 6250 4550
 Wire Wire Line
-	6250 4550 6750 4550
-Wire Wire Line
-	6750 4550 6750 4400
+	6050 4550 6050 4400
 $Comp
 L Device:L_Small L13
 U 1 1 5DABBD52
@@ -320,27 +313,27 @@ Connection ~ 9200 3750
 Wire Wire Line
 	9200 3750 9100 3750
 Wire Wire Line
-	10100 3750 10050 3750
+	10100 4050 10050 4050
 Wire Wire Line
-	10300 3950 10300 4050
+	10300 3850 10300 3750
 Wire Wire Line
-	10300 4050 10150 4050
+	10300 3750 10150 3750
 $Comp
 L power:GND #PWR015
 U 1 1 5DAC5ECA
-P 10150 4150
-F 0 "#PWR015" H 10150 3900 50  0001 C CNN
-F 1 "GND" H 10150 4000 50  0000 C CNN
-F 2 "" H 10150 4150 50  0001 C CNN
-F 3 "" H 10150 4150 50  0001 C CNN
-	1    10150 4150
-	1    0    0    -1  
+P 10150 3650
+F 0 "#PWR015" H 10150 3400 50  0001 C CNN
+F 1 "GND" H 10150 3500 50  0000 C CNN
+F 2 "" H 10150 3650 50  0001 C CNN
+F 3 "" H 10150 3650 50  0001 C CNN
+	1    10150 3650
+	1    0    0    1   
 $EndComp
 Wire Wire Line
-	10150 4150 10150 4050
-Connection ~ 10150 4050
+	10150 3650 10150 3750
+Connection ~ 10150 3750
 Wire Wire Line
-	10150 4050 10050 4050
+	10150 3750 10050 3750
 Wire Wire Line
 	8400 3750 8500 3750
 Wire Wire Line
@@ -535,7 +528,6 @@ F 4 "NoPart" H 7750 4550 50  0001 C CNN "Mouser"
 	1    7750 4550
 	1    0    0    1   
 $EndComp
-Connection ~ 6750 4550
 $Comp
 L Connector_Generic:Conn_01x01 J6
 U 1 1 5DB4627F
@@ -1075,8 +1067,6 @@ Wire Wire Line
 Wire Wire Line
 	6850 4900 6850 4550
 Connection ~ 6850 4550
-Wire Wire Line
-	6850 4550 6750 4550
 Text Label 2550 2750 0    50   ~ 0
 +3V3
 $Comp
@@ -1902,4 +1892,22 @@ F 3 "~" H 3750 5450 50  0001 C CNN
 	1    3750 5450
 	-1   0    0    1   
 $EndComp
+Text Label 4450 3850 0    50   ~ 0
+LO_OUT_N
+Text Label 4450 3750 0    50   ~ 0
+LO_OUT_P
+Text Label 6100 3750 0    50   ~ 0
+LO_BAL_P
+Text Label 6100 4050 0    50   ~ 0
+LO_BAL_N
+Connection ~ 6050 4050
+Wire Wire Line
+	6650 4050 7000 4050
+Wire Wire Line
+	6250 4550 6850 4550
+Wire Wire Line
+	6050 4550 6250 4550
+Connection ~ 6250 4550
+Text Label 10050 4050 0    50   ~ 0
+RF
 $EndSCHEMATC
