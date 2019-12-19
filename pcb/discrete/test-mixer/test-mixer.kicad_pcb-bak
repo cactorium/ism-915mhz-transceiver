@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 15)
+    (drawings 16)
     (tracks 461)
     (zones 0)
     (modules 81)
@@ -2975,6 +2975,9 @@
     )
   )
 
+  (gr_text "Mixer test design\nRev 1" (at 24.275 129.875) (layer F.SilkS)
+    (effects (font (size 1.016 1.016) (thickness 0.1524)) (justify left))
+  )
   (gr_line (start 32.975 101.125) (end 30.35 105.05) (layer F.SilkS) (width 0.1524))
   (gr_line (start 31.9 103.775) (end 25.9 109.625) (layer F.SilkS) (width 0.1524))
   (gr_line (start 32.9 100.575) (end 31.65 101.525) (layer F.SilkS) (width 0.1524))
